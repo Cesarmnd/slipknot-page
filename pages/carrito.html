@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Slipknot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos de BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Mis Estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navCont" id="header">
+        <!-- Menú de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a href="../index.html" id="logo">
+                    <img src="../images/logo.png" alt="logo" title="Slipknot">
+                </a>
+                <!-- Botón de despliegue -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Elementos del menú -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="navLink" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navLink" href="../index.html#aboutUs">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navLink" href="../index.html#proxEvents">Presentaciones</a>
+                        </li>
+                        <!-- Submenú -->
+                        <li class="nav-item dropdown">
+                            <!-- Flecha de despliegue -->
+                            <a class="navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tienda
+                            </a>
+                            <!-- Elementos del submenú -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item text-white" href="tienda.html#mascaras">Máscaras</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="tienda.html#prendas">Prendas de vestir</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="tienda.html#accesorios">Polainas de
+                                        cuello</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white" href="tienda.html#miscelanea">Miscelánea</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navLink" href="contactos.html">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Logo Secundario -->
+                <img src="../images/star.png" alt="star" title="Slipknot star" class="secLogo">
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main class="mainCart">
+        <!-- "Botón" para regresar a la parte superior de la página -->
+        <div class="topButton">
+            <a href="#header">
+                <img src="../images/arrow-144-32.png" alt="toparrow" title="Return to top">
+            </a>
+        </div>
+        <h1 class="cartTitle">Mi carrito</h1>
+        <!-- Sección donde se añadirán los productos -->
+        <div class="cartProduct">
+            <!-- Imagen del Producto -->
+            <img src="../images/referencia.jpg" alt="imgProduct">
+            <div class="cartCont">
+                <h2 class="cartName">Nombre del producto</h2>
+                <div class="cartSubtitle">
+                    <p>Cantidad</p>
+                </div>
+                <!-- Cantidad -->
+                <div class="cartQuantity">
+                    <input type="button" name="remove" id="remove" value="-">
+                    <p>0</p>
+                    <input type="button" name="add" id="add" value="+">
+                </div>
+                <!-- Precio según la cantidad -->
+                <div class="cartPrice">
+                    <p>Total: USD 00.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="cartPayCont">
+            <!-- Monto total -->
+            <div class="totalAmmount">
+                <p>Total a pagar: USD 00.00</p>
+            </div>
+            <!-- Botón para ir al proceso de pago -->
+            <div class="cartPayButton">
+                <a href="pago.html">
+                    <input type="button" name="checkout" id="checkout" value="Pagar">
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="container-fluid footerCont py-3">
+        <!-- Logo -->
+        <a href="../index.html" id="logoFooter">
+            <img src="../images/logo.png" alt="logoFooter" class="footerLogo">
+        </a>
+        <!-- Redes Sociales -->
+        <!-- Textos -->
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="https://www.facebook.com/slipknot" target="_blank"
+                    class="nav-link px-2 text-muted">Facebook</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.instagram.com/slipknot/" target="_blank"
+                    class="nav-link px-2 text-muted">Instagram</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    target="_blank" class="nav-link px-2 text-muted">Twitter</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank"
+                    class="nav-link px-2 text-muted">Youtube</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank"
+                    class="nav-link px-2 text-muted">Spotify</a>
+            </li>
+        </ul>
+        <!-- Íconos -->
+        <div class="footerIcons" id="footerIcons">
+            <a href="https://www.facebook.com/slipknot" target="_blank">
+                <img src="../images/facebook-3-32.png" alt="facebook">
+            </a>
+            <a href="https://www.instagram.com/slipknot/" target="_blank">
+                <img src="../images/instagram-32.png" alt="instagram">
+            </a>
+            <a href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank">
+                <img src="../images/twitter-32.png" alt="twitter">
+            </a>
+            <a href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">
+                <img src="../images/youtube-32.png" alt="youtube">
+            </a>
+            <a href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">
+                <img src="../images/spotify-32.png" alt="spotify">
+            </a>
+        </div>
+        <!-- Copyright -->
+        <p class="text-center text-muted copyRight">© 2021 Slipknot, Inc</p>
+    </footer>
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
