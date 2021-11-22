@@ -20,57 +20,61 @@
 
 <body>
     <!-- Header -->
-    <header class="navCont navIndex" id="header">
+    <header class="header" id="header">
         <!-- Menú de navegación -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a href="index.html" id="logo"><img src="images/logo.png" alt="logo" title="Slipknot"></a>
-                <!-- Botón de despliegue -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Elementos del menú -->
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item navIndexItem">
-                            <a class="navLink" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item navIndexItem">
-                            <a class="navLink" href="#aboutUs">Nosotros</a>
-                        </li>
-                        <li class="nav-item navIndexItem">
-                            <a class="navLink" href="#proxEvents">Presentaciones</a>
-                        </li>
-                        <!-- Submenú -->
-                        <li class="nav-item dropdown navIndexItem">
-                            <!-- Flecha de despliegue -->
-                            <a class="navLink dropdown-toggle" href="pages/tienda.html" id="navbarDropdownMenuLink"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tienda
-                            </a>
-                            <!-- Elementos del submenú -->
-                            <ul class="dropdown-menu dropMenuIndex" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item dropdownIndex"
-                                        href="pages/tienda.html#mascaras">Máscaras</a></li>
-                                <li><a class="dropdown-item dropdownIndex" href="pages/tienda.html#prendas">Prendas de
-                                        vestir</a></li>
-                                <li><a class="dropdown-item dropdownIndex" href="pages/tienda.html#accesorios">Polainas
-                                        de cuello</a></li>
-                                <li><a class="dropdown-item dropdownIndex"
-                                        href="pages/tienda.html#miscelanea">Miscelánea</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item navIndexItem">
-                            <a class="navLink" href="pages/contactos.html">Contactos</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Logo Secundario -->
-                <img src="images/star.png" alt="star" title="Slipknot star" class="secLogo">
+        <nav class="header__nav navbar-expand-lg navbar-dark container-fluid">
+            <!-- Logo -->
+            <a href="index.html" id="logo">
+                <img class="header__logo" src="images/logo.png" alt="logo" title="Slipknot">
+            </a>
+            <!-- Botón de despliegue -->
+            <button class="header__button navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Elementos del menú -->
+            <div class="header__dropdown collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="header__menu navbar-nav">
+                    <li class="header__element nav-item navIndexItem">
+                        <a class="header__link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="header__element nav-item navIndexItem">
+                        <a class="header__link" href="#aboutUs">Nosotros</a>
+                    </li>
+                    <li class="header__element nav-item navIndexItem">
+                        <a class="header__link" href="#proxEvents">Presentaciones</a>
+                    </li>
+                    <!-- Submenú -->
+                    <li class="header__element nav-item dropdown navIndexItem">
+                        <!-- Flecha de despliegue -->
+                        <a class="header__link navLink dropdown-toggle" href="pages/tienda.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tienda
+                        </a>
+                        <!-- Elementos del submenú -->
+                        <ul class="header__submenu dropdown-menu dropMenuIndex" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#mascaras">Máscaras</a>
+                            </li>
+                            <li>
+                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#prendas">Prendas de vestir</a>
+                            </li>
+                            <li>
+                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#accesorios">Polainas de cuello</a>
+                            </li>
+                            <li>
+                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#miscelanea">Miscelánea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__element nav-item navIndexItem">
+                        <a class="header__link" href="pages/contactos.html">Contactos</a>
+                    </li>
+                </ul>
             </div>
+            <!-- Logo Secundario -->
+            <img class="header__star" src="images/star.png" alt="star" title="Slipknot star">
         </nav>
     </header>
     <!-- Main -->
