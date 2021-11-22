@@ -1,0 +1,12 @@
+# Dentro de Gitignore armo una lista de objetos a ignorar
+
+# Ignora archivos
+package.json
+package-lock.json
+
+#Ignora carpetas
+node_modules
+
+
+
+
