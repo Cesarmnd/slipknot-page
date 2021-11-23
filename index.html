@@ -12,8 +12,7 @@
     <meta name="description"
         content="Slipknot es una banda estadounidense de heavy metal que realiza giras a través del mundo. Las canciones de Slipknot estan en su mayoría inspiradas en sucesos acontecidos en la vida de sus miembros.">
     <!-- Estilos de BS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Mis Estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,10 +21,11 @@
     <!-- Header -->
     <header class="header" id="header">
         <!-- Menú de navegación -->
-        <nav class="header__nav navbar-expand-lg navbar-dark container-fluid">
+        <nav class="header__nav navbar navbar-expand-lg navbar-dark">
+            <div class="header__container container-fluid">
             <!-- Logo -->
-            <a href="index.html" id="logo">
-                <img class="header__logo" src="images/logo.png" alt="logo" title="Slipknot">
+            <a  class="header__logo" href="index.html" id="logo">
+                <img src="images/logo.png" alt="logo" title="Slipknot">
             </a>
             <!-- Botón de despliegue -->
             <button class="header__button navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,45 +36,46 @@
             <!-- Elementos del menú -->
             <div class="header__dropdown collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="header__menu navbar-nav">
-                    <li class="header__element nav-item navIndexItem">
+                    <li class="header__element nav-item">
                         <a class="header__link" aria-current="page" href="index.html">Inicio</a>
                     </li>
-                    <li class="header__element nav-item navIndexItem">
+                    <li class="header__element nav-item">
                         <a class="header__link" href="#aboutUs">Nosotros</a>
                     </li>
-                    <li class="header__element nav-item navIndexItem">
+                    <li class="header__element nav-item">
                         <a class="header__link" href="#proxEvents">Presentaciones</a>
                     </li>
                     <!-- Submenú -->
-                    <li class="header__element nav-item dropdown navIndexItem">
+                    <li class="header__element nav-item dropdown">
                         <!-- Flecha de despliegue -->
                         <a class="header__link navLink dropdown-toggle" href="pages/tienda.html" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Tienda
                         </a>
                         <!-- Elementos del submenú -->
-                        <ul class="header__submenu dropdown-menu dropMenuIndex" aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>
-                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#mascaras">Máscaras</a>
+                                <a class="header__sublink dropdown-item" href="pages/tienda.html#mascaras">Máscaras</a>
                             </li>
                             <li>
-                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#prendas">Prendas de vestir</a>
+                                <a class="header__sublink dropdown-item" href="pages/tienda.html#prendas">Prendas de vestir</a>
                             </li>
                             <li>
-                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#accesorios">Polainas de cuello</a>
+                                <a class="header__sublink dropdown-item" href="pages/tienda.html#accesorios">Polainas de cuello</a>
                             </li>
                             <li>
-                                <a class="header__link dropdown-item dropdownIndex" href="pages/tienda.html#miscelanea">Miscelánea</a>
+                                <a class="header__sublink dropdown-item" href="pages/tienda.html#miscelanea">Miscelánea</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="header__element nav-item navIndexItem">
+                    <li class="header__element nav-item">
                         <a class="header__link" href="pages/contactos.html">Contactos</a>
                     </li>
                 </ul>
             </div>
             <!-- Logo Secundario -->
             <img class="header__star" src="images/star.png" alt="star" title="Slipknot star">
+            </div>
         </nav>
     </header>
     <!-- Main -->
@@ -332,13 +333,9 @@
         <!-- Copyright -->
         <p class="text-center text-muted copyRight">© 2021 Slipknot, Inc</p>
     </footer>
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
+    <!-- Scripts Bootstrap -->|
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 </html>
