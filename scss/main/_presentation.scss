@@ -1,10 +1,17 @@
 .presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     @include sizes(100%, 100vh);
 
-    &__video {
-        height: 100%;
+    &__video-desktop {
+        display: none;
+    }
+
+    &__video-mobile {
+        width: 100%;
     }
 
     &__title {
@@ -12,10 +19,6 @@
         display: flex;
         justify-content: center;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 50%;
-        transform: translateX(-50%);
     
         .presentation__img {
             width: 250px;
