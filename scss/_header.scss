@@ -2,6 +2,20 @@
 .header {
     width: 100%;
 
+    &__button-nav {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 100;
+        @include sizes (25px, 25px);
+        background-color: $red-logo;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        &:focus {
+            
+        }
+    }
+
     &__nav {
         padding: 5px;
     }

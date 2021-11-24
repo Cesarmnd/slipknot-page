@@ -21,15 +21,19 @@
 <body>
     <!-- Header -->
     <header class="header" id="header">
+        <button class="header__button-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navBar"
+            aria-expanded="false" aria-controls="collapseExample">
+            <img src="images/caret-down-fill.svg" alt="dropdown-button">
+        </button>
         <!-- Menú de navegación -->
-        <nav class="header__nav navbar navbar-expand-lg navbar-dark">
+        <nav class="header__nav navbar navbar-expand-lg navbar-dark" id="navBar">
             <div class="header__container container-fluid">
                 <!-- Logo -->
                 <a class="header__logo" href="index.html" id="logo">
                     <img src="images/logo.png" alt="logo" title="Slipknot">
                 </a>
                 <!-- Botón de despliegue -->
-                <button class="header__button navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="header__button-menu navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -95,9 +99,11 @@
         <!-- Video de presentación -->
         <section class="presentation">
             <!-- Video para Mobile -->
-            <video class="presentation__video-mobile" src="videos/mobile-video.mp4" autoplay muted loop>Tu navegador no soporta el formato de este video</video>
+            <video class="presentation__video-mobile" src="videos/mobile-video.mp4" autoplay muted loop>Tu navegador no
+                soporta el formato de este video</video>
             <!-- Video para Desktops -->
-            <video class="presentation__video-desktop" src="videos/video.mp4" autoplay muted loop>Tu navegador no soporta el
+            <video class="presentation__video-desktop" src="videos/video.mp4" autoplay muted loop>Tu navegador no
+                soporta el
                 formato de este video.</video>
             <h1 class="presentation__title">
                 <img class="presentation__img" src="images/mainpng.png" alt="title">
@@ -219,8 +225,8 @@
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/4ZDBQSIDIZRUBOG2OHcN3T?si=b1uEBcFWTVqXTBMSgmxpcg"
                         target="_blank">
-                        <img class="album__image" src="images/albums/subliminal-verses.jpg"
-                            alt="the_subliminal _verses" title="The Subliminal Verses">
+                        <img class="album__image" src="images/albums/subliminal-verses.jpg" alt="the_subliminal _verses"
+                            title="The Subliminal Verses">
                     </a>
                     <p>Vol. 3: The Subliminal Verses</p>
                 </div>
@@ -258,8 +264,8 @@
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/754RY5WpZ2LTUZsk8kDBju?si=91LK1WGQS5eR15Ybf3SXSw"
                         target="_blank">
-                        <img class="album__image" src="images/albums/we_are_not_your_kind.jpg" alt="we_are_not_your_kind"
-                            title="We Are Not Your Kind">
+                        <img class="album__image" src="images/albums/we_are_not_your_kind.jpg"
+                            alt="we_are_not_your_kind" title="We Are Not Your Kind">
                     </a>
                     <p>We Are Not Your Kind</p>
                 </div>
@@ -321,19 +327,25 @@
         <!-- Textos -->
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.facebook.com/slipknot" target="_blank">Facebook</a>
+                <a class="nav-link px-2 text-muted" href="https://www.facebook.com/slipknot"
+                    target="_blank">Facebook</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.instagram.com/slipknot/" target="_blank">Instagram</a>
+                <a class="nav-link px-2 text-muted" href="https://www.instagram.com/slipknot/"
+                    target="_blank">Instagram</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" >Twitter</a>
+                <a class="nav-link px-2 text-muted"
+                    href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    target="_blank">Twitter</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">Youtube</a>
+                <a class="nav-link px-2 text-muted" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ"
+                    target="_blank">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">Spotify</a>
+                <a class="nav-link px-2 text-muted" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8"
+                    target="_blank">Spotify</a>
             </li>
         </ul>
         <!-- Íconos -->
@@ -344,7 +356,8 @@
             <a class="footer__link" href="https://www.instagram.com/slipknot/" target="_blank">
                 <img src="images/icons/instagram-32.png" alt="instagram">
             </a>
-            <a class="footer__link" href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            <a class="footer__link"
+                href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
                 target="_blank">
                 <img src="images/icons/twitter-32.png" alt="twitter">
             </a>
