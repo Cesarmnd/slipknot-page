@@ -1,0 +1,16 @@
+/* Sección Eventos */
+.events {
+    color: $white;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__list {
+        list-style-position: inside;
+    }
+}

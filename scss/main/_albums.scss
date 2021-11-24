@@ -1,0 +1,22 @@
+/* Sección Álbums */
+.album {
+    color: $white;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__discography {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .album__disc {
+            text-align: center;
+
+            .album__image {
+                @include sizes(200px,200px);
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/* Sección Nosotros*/
+.about-us {
+    color: $white;
+    &__title {
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

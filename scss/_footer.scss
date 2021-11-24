@@ -1,0 +1,15 @@
+/* Footer */
+.footer {
+    text-align: center;
+
+    &__icons-container {
+        display: none;
+        .footer__link {
+            text-decoration: none;
+        }
+    }
+
+    &__copyright {
+        margin-top: 10px;
+    }
+}

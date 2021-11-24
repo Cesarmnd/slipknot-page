@@ -94,9 +94,11 @@
         </div>
         <!-- Video de presentación -->
         <section class="presentation">
+            <!-- Video para Mobile -->
+            <video class="presentation__video-mobile" src="videos/mobile-video.mp4" autoplay muted loop>Tu navegador no soporta el formato de este video</video>
+            <!-- Video para Desktops -->
             <video class="presentation__video-desktop" src="videos/video.mp4" autoplay muted loop>Tu navegador no soporta el
                 formato de este video.</video>
-            <video class="presentation__video-mobile" src="videos/mobile-video.mp4" autoplay muted loop>Tu navegador no soporta el formato de este video</video>
             <h1 class="presentation__title">
                 <img class="presentation__img" src="images/mainpng.png" alt="title">
             </h1>
@@ -104,10 +106,10 @@
         <!-- Sección Nosotros -->
         <section class="about-us mt-3 mt-md-4 mt-lg-5">
             <h2 class="about-us__title text-danger display-4 pt-lg-5" id="aboutUs">Nosotros</h2>
-            <!-- Imagen para resoluciones menores a 780px -->
+            <!-- Imagen para Mobile -->
             <img class="about-us__img px-3 px-md-0 mb-3 mb-md-0" src="images/members/team.jpg" title="teamMembers"
                 alt="team">
-            <!-- Carousel -->
+            <!-- Carousel para Desktops -->
             <div class="carousel slide d-none d-md-block" id="carouselExampleControls" data-bs-ride="carousel">
                 <div class="carousel-inner aboutUsCont px-3 px-md-0 mb-3 mb-md-0">
                     <div class="carousel-item active">
@@ -197,8 +199,8 @@
                 estas, como es el caso de "Snuff".</p>
         </section>
         <!-- Sección Albumes -->
-        <div class="album section--position">
-            <h2 class="album__title title--modifier">Álbumes</h2>
+        <section class="album mt-3 mt-md-4 my-lg-5">
+            <h2 class="album__title text-danger display-4 pt-lg-5">Álbumes</h2>
             <div class="album__discography">
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/2dL9Q5AtIv4Rw1L6lKcIUc?si=-g_UVGm9TWm2AUSJzTuoGA"
@@ -217,7 +219,7 @@
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/4ZDBQSIDIZRUBOG2OHcN3T?si=b1uEBcFWTVqXTBMSgmxpcg"
                         target="_blank">
-                        <img class="album__image" src="images/albums/the_subliminal_verses.jpg"
+                        <img class="album__image" src="images/albums/subliminal-verses.jpg"
                             alt="the_subliminal _verses" title="The Subliminal Verses">
                     </a>
                     <p>Vol. 3: The Subliminal Verses</p>
@@ -225,7 +227,7 @@
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/2rdXvZY0IkT1TPuA8SKTix?si=whnKvKRhTrmTTC0r9gFMaA"
                         target="_blank">
-                        <img class="album__image" src="images/albums/9.0_live.jpg" alt="9_0_live" title="9.0 Live">
+                        <img class="album__image" src="images/albums/9_0_live.jpg" alt="9_0_live" title="9.0 Live">
                     </a>
                     <p>9.0: Live</p>
                 </div>
@@ -248,7 +250,7 @@
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/09pLzub9F2asXde8dH2UDN?si=UN4CPCIhQsOdxrQw0-hVEQ"
                         target="_blank">
-                        <img class="album__image" src="images/albums/the_day_of_the_gusano.png" alt="day_of_the_gusano"
+                        <img class="album__image" src="images/albums/day_of_the_gusano.jpg" alt="day_of_the_gusano"
                             title="Day of the Gusano">
                     </a>
                     <p>Day of the Gusano</p>
@@ -256,13 +258,13 @@
                 <div class="album__disc">
                     <a href="https://open.spotify.com/album/754RY5WpZ2LTUZsk8kDBju?si=91LK1WGQS5eR15Ybf3SXSw"
                         target="_blank">
-                        <img class="album__image" src="images/albums/we_are_not_your_kind.png" alt="we_are_not_your"
+                        <img class="album__image" src="images/albums/we_are_not_your_kind.jpg" alt="we_are_not_your_kind"
                             title="We Are Not Your Kind">
                     </a>
                     <p>We Are Not Your Kind</p>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Sección "Eventos" -->
         <div class="events mt-3 mt-md-4 my-lg-5">
             <h2 class="events__title text-danger display-5" id="proxEvents">Próximos Eventos</h2>
@@ -318,34 +320,38 @@
         <!-- Redes Sociales -->
         <!-- Textos -->
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="https://www.facebook.com/slipknot" target="_blank"
-                    class="nav-link px-2 text-muted">Facebook</a></li>
-            <li class="nav-item"><a href="https://www.instagram.com/slipknot/" target="_blank"
-                    class="nav-link px-2 text-muted">Instagram</a></li>
-            <li class="nav-item"><a
-                    href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                    target="_blank" class="nav-link px-2 text-muted">Twitter</a></li>
-            <li class="nav-item"><a href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank"
-                    class="nav-link px-2 text-muted">Youtube</a></li>
-            <li class="nav-item"><a href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank"
-                    class="nav-link px-2 text-muted">Spotify</a></li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="https://www.facebook.com/slipknot" target="_blank">Facebook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="https://www.instagram.com/slipknot/" target="_blank">Instagram</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" >Twitter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">Youtube</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2 text-muted" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">Spotify</a>
+            </li>
         </ul>
         <!-- Íconos -->
         <div class="footer__icons-container" id="footerIcons">
-            <a href="https://www.facebook.com/slipknot" target="_blank">
+            <a class="footer__link" href="https://www.facebook.com/slipknot" target="_blank">
                 <img src="images/icons/facebook-3-32.png" alt="facebook">
             </a>
-            <a href="https://www.instagram.com/slipknot/" target="_blank">
+            <a class="footer__link" href="https://www.instagram.com/slipknot/" target="_blank">
                 <img src="images/icons/instagram-32.png" alt="instagram">
             </a>
-            <a href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            <a class="footer__link" href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
                 target="_blank">
                 <img src="images/icons/twitter-32.png" alt="twitter">
             </a>
-            <a href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">
+            <a class="footer__link" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">
                 <img src="images/icons/youtube-32.png" alt="youtube">
             </a>
-            <a href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">
+            <a class="footer__link" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">
                 <img src="images/icons/spotify-32.png" alt="spotify">
             </a>
         </div>
