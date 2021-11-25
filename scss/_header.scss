@@ -8,8 +8,8 @@
         position: absolute;
         border: none;
         background-color: transparent;
-        margin: 10px;
-        @include sizes (25px, 25px)
+        margin: 20px;
+        @include sizes (32px, 32px)
     }
 
     &__offcanvas {
@@ -21,7 +21,7 @@
         .header__button-close {
             border: none;
             background-color: transparent;
-            @include sizes (25px, 25px)
+            @include sizes (32px, 32px)
         }
 
         .header__nav {
@@ -74,6 +74,6 @@
         bottom: 20px;
         left: 50%;
         transform: translate(-50%);
-        @include sizes (50px, 50px)
+        @include sizes (80px, 80px)
     }
 }

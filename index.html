@@ -22,23 +22,33 @@
     <!-- Header -->
     <header class="header" id="header">
         <!-- Menú de navegación -->
-        <button class="header__button-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <button class="header__button-nav" type="button" id="OpenMenu">
             <span>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="#FF0001" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                    class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512">
+                    <path fill="#FF0001"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
                 </svg>
             </span>
         </button>
-        <div class="header__offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <!-- Offcanvas -->
+        <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-                    <!-- Logo -->
-                    <a class="header__logo" href="index.html" id="logo">
-                        <img src="images/logo.png" alt="logo" title="Slipknot">
-                    </a>
-                <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                <!-- Logo -->
+                <a class="header__logo" href="index.html" id="logo">
+                    <img src="images/logo.png" alt="logo" title="Slipknot">
+                </a>
+                <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                        <path fill-rule="evenodd"
+                            d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
                     </svg>
                 </button>
             </div>
@@ -51,7 +61,7 @@
                                 <li class="header__element nav-item">
                                     <a class="header__link" aria-current="page" href="index.html">Inicio</a>
                                 </li>
-                                <li class="header__element nav-item">
+                                <li class="header__element nav-item" data-bs-dismiss="offcanvas">
                                     <a class="header__link" href="#aboutUs">Nosotros</a>
                                 </li>
                                 <li class="header__element nav-item">
@@ -72,7 +82,8 @@
                                                 href="pages/tienda.html#mascaras">Máscaras</a>
                                         </li>
                                         <li>
-                                            <a class="header__sublink dropdown-item" href="pages/tienda.html#prendas">Prendas de
+                                            <a class="header__sublink dropdown-item"
+                                                href="pages/tienda.html#prendas">Prendas de
                                                 vestir</a>
                                         </li>
                                         <li>
@@ -93,7 +104,7 @@
                     </div>
                 </nav>
                 <!-- Logo Secundario -->
-                <img class="header__star" src="images/star.png" alt="star" title="Slipknot star">
+                <img class="header__star" src="images/star_2.png" alt="star" title="Slipknot star">
             </div>
         </div>
     </header>
@@ -115,7 +126,7 @@
                 soporta el
                 formato de este video.</video>
             <h1 class="presentation__title">
-                <img class="presentation__star"   src="images/star_2.png" alt="title-star">
+                <img class="presentation__star" src="images/star_2.png" alt="title-star">
                 <img class="presentation__img" src="images/mainpng.png" alt="title">
             </h1>
         </section>
@@ -388,6 +399,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
+
+    <!-- Mis Scripts -->
+    <script src="scripts/code.js"></script>
 </body>
 
 </html>
