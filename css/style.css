@@ -11,19 +11,18 @@ body {
   background-color: #000;
   font-family: 'Quicksand', sans-serif; }
 
+@keyframes spinning {
+  0% {
+    transform: translate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 /* Header */
 .header {
-  width: 100%; }
-  .header__button-nav {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 100;
-    width: 25px;
-    height: 25px;
-    background-color: #FF0001;
-    border: none;
-    border-radius: 0 0 10px 10px; }
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 200; }
   .header__nav {
     padding: 5px; }
   .header__container {
@@ -78,14 +77,25 @@ body {
   .presentation__video-desktop {
     display: none; }
   .presentation__video-mobile {
-    width: 100%; }
+    width: 100%;
+    filter: brightness(50%); }
   .presentation__title {
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute; }
     .presentation__title .presentation__img {
+      position: relative;
+      z-index: 100;
       width: 250px; }
+    .presentation__title .presentation__star {
+      position: absolute;
+      width: 200px;
+      animation-name: spinning;
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
+      animation-timing-function: linear; }
 
 /* Sección Nosotros*/
 .about-us {

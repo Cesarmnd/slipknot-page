@@ -12,16 +12,29 @@
 
     &__video-mobile {
         width: 100%;
+        filter: brightness(50%);
     }
 
     &__title {
         margin: 0;
         display: flex;
         justify-content: center;
+        align-items: center;
         position: absolute;
     
         .presentation__img {
+            position: relative;
+            z-index: 100;
             width: 250px;
+        }
+
+        .presentation__star {
+            position: absolute;
+            width: 200px;
+            animation-name: spinning;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-timing-function: linear;
         }
     }
 }
