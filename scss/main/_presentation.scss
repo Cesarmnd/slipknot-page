@@ -8,11 +8,20 @@
 
     &__video-desktop {
         display: none;
+
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+            filter: brightness(50%);
+        }
     }
 
     &__video-mobile {
         width: 100%;
         filter: brightness(50%);
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 
     &__title {
@@ -26,11 +35,15 @@
             position: relative;
             z-index: 100;
             width: 250px;
+
+            @media screen and (min-width: 768px) {
+            width: 450px;
+            }
         }
 
         .presentation__star {
             position: absolute;
-            width: 200px;
+            width: 250px;
             animation-name: spinning;
             animation-iteration-count: infinite;
             animation-duration: 3s;

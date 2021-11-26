@@ -104,7 +104,7 @@
                         </li>
                     </ul>
                     <!-- Logo Secundario -->
-                    <img class="header__star" src="images/star_2.png" alt="star" title="Slipknot star">
+                    <img class="header__star header__star--mobile" src="images/star_2.png" alt="star" title="Slipknot star">
                 </div>
             </div>
             <!-- Navbar -->
@@ -192,7 +192,19 @@
             <img class="about-us__img px-3 px-md-0 mb-3 mb-md-0" src="images/members/team.jpg" title="teamMembers"
                 alt="team">
             <!-- Carousel para Desktops -->
-            <div class="carousel slide d-none d-md-block" id="carouselExampleControls" data-bs-ride="carousel">
+            <!-- <div class="carousel slide d-none d-md-block" id="carouselExampleControls" data-bs-ride="carousel"> -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                </div>
                 <div class="carousel-inner aboutUsCont px-3 px-md-0 mb-3 mb-md-0">
                     <div class="carousel-item active">
                         <img src="images/members/main_corey.jpg" class="d-block" alt="corey">
@@ -258,16 +270,6 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
             <p class="about-us__text px-3">Nuestra banda fue creada en Des Moines, Iowa, Estados Unidos en el año 1995.
                 Actualmente se encuentra conformada por 9 integrantes. Por si te lo estás preguntando, las máscaras que
@@ -284,67 +286,67 @@
         <section class="album mt-3 mt-md-4 my-lg-5">
             <h2 class="album__title text-danger display-4 pt-lg-5">Álbumes</h2>
             <div class="album__discography">
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/2dL9Q5AtIv4Rw1L6lKcIUc?si=-g_UVGm9TWm2AUSJzTuoGA"
-                        target="_blank">
+                <a class="album__link" href="https://open.spotify.com/album/2dL9Q5AtIv4Rw1L6lKcIUc?si=-g_UVGm9TWm2AUSJzTuoGA"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/slipknot.jpg" alt="slipknot" title="Slipknot">
-                    </a>
-                    <p>Slipknot</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/5Zs0mNCTs73CqPKbZPWFX9?si=5KF7NxzBQOWP4K3JEgmGmw"
-                        target="_blank">
+                        <p class="album__name">Slipknot</p>
+                    </div>
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/5Zs0mNCTs73CqPKbZPWFX9?si=5KF7NxzBQOWP4K3JEgmGmw"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/iowa.jpg" alt="iowa" title="Iowa">
-                    </a>
-                    <p>Iowa</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/4ZDBQSIDIZRUBOG2OHcN3T?si=b1uEBcFWTVqXTBMSgmxpcg"
-                        target="_blank">
+                        <p class="album__name">Iowa</p>
+                    </div>
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/4ZDBQSIDIZRUBOG2OHcN3T?si=b1uEBcFWTVqXTBMSgmxpcg"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/subliminal-verses.jpg" alt="the_subliminal _verses"
                             title="The Subliminal Verses">
-                    </a>
-                    <p>Vol. 3: The Subliminal Verses</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/2rdXvZY0IkT1TPuA8SKTix?si=whnKvKRhTrmTTC0r9gFMaA"
-                        target="_blank">
+                        <p class="album__name">Vol. 3: The Subliminal Verses</p>
+                    </div>
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/2rdXvZY0IkT1TPuA8SKTix?si=whnKvKRhTrmTTC0r9gFMaA"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/9_0_live.jpg" alt="9_0_live" title="9.0 Live">
-                    </a>
-                    <p>9.0: Live</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/0hFWapnP7orzXCMwNU5DuA?si=EG8-T0drQ_m-JOxVNhUiYQ"
-                        target="_blank">
+                        <p class="album__name">9.0: Live</p>
+                    </div>
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/0hFWapnP7orzXCMwNU5DuA?si=EG8-T0drQ_m-JOxVNhUiYQ"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/all_hope_is_gone.jpg" alt="all_hope_is_gone"
                             title="All hope is gone">
-                    </a>
-                    <p>All hope is gone</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/3nyxMohQINxnhYwyHvUqVf?si=zWxoAaiBS2KXVRlaYGzkLg"
-                        target="_blank">
+                        <p class="album__name">All hope is gone</p>
+                    </div>
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/3nyxMohQINxnhYwyHvUqVf?si=zWxoAaiBS2KXVRlaYGzkLg"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/the_gray_chapter.jpg" alt="the_gray_chapter"
                             title="The Gray Chapter">
-                    </a>
-                    <p>.5 The Gray Chapter</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/09pLzub9F2asXde8dH2UDN?si=UN4CPCIhQsOdxrQw0-hVEQ"
-                        target="_blank">
+                        <p class="album__name">.5 The Gray Chapter</p>
+                    </div>   
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/09pLzub9F2asXde8dH2UDN?si=UN4CPCIhQsOdxrQw0-hVEQ"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/day_of_the_gusano.jpg" alt="day_of_the_gusano"
                             title="Day of the Gusano">
-                    </a>
-                    <p>Day of the Gusano</p>
-                </div>
-                <div class="album__disc">
-                    <a href="https://open.spotify.com/album/754RY5WpZ2LTUZsk8kDBju?si=91LK1WGQS5eR15Ybf3SXSw"
-                        target="_blank">
+                        <p class="album__name">Day of the Gusano</p>
+                    </div>
+                </a>
+                <a class="album__link" href="https://open.spotify.com/album/754RY5WpZ2LTUZsk8kDBju?si=91LK1WGQS5eR15Ybf3SXSw"
+                    target="_blank">
+                    <div class="album__disc">
                         <img class="album__image" src="images/albums/we_are_not_your_kind.jpg"
                             alt="we_are_not_your_kind" title="We Are Not Your Kind">
-                    </a>
-                    <p>We Are Not Your Kind</p>
-                </div>
+                        <p class="album__name">We Are Not Your Kind</p>
+                    </div>
+                </a>
             </div>
         </section>
         <!-- Sección "Eventos" -->

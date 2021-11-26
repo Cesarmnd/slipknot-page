@@ -1,11 +1,29 @@
 /* Sección Nosotros*/
 .about-us {
     color: $white;
+
+    @media screen and (min-width:576px) {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width:768px) {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: repeat(2, min-content);
+    }
+
     &__title {
         text-align: center;
+        color: $red-logo;
+        grid-column: 1/3;
     }
 
     &__img {
         width: 100%;
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
     }
 }

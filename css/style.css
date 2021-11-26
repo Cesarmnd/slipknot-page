@@ -63,18 +63,31 @@ body {
               color: #FF0001;
               text-shadow: 0px 0px 10px #FF0001; }
     .header__nav .header__star {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translate(-50%);
       width: 80px;
       height: 80px; }
+      .header__nav .header__star--mobile {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%); }
     .header__nav .header__desktop {
       display: none; }
 
+@media screen and (min-width: 576px) {
+  .header .header__offcanvas {
+    width: 65%;
+    height: 100vh; } }
+
 @media screen and (min-width: 768px) {
+  .header .header__offcanvas {
+    width: 50%;
+    height: 100vh; } }
+
+@media screen and (min-width: 992px) {
   .header {
-    display: flex; }
+    display: flex;
+    width: 100%;
+    height: auto; }
     .header__button-nav {
       display: none; }
     .header__offcanvas {
@@ -84,7 +97,36 @@ body {
       .header__nav .header__desktop {
         display: flex;
         align-items: center;
-        width: 100%; } }
+        width: 100%; }
+        .header__nav .header__desktop .header__logo {
+          padding: 8px; }
+        .header__nav .header__desktop .header__menu {
+          flex-direction: row;
+          width: 100%; }
+          .header__nav .header__desktop .header__menu .header__element {
+            flex: auto;
+            text-align: center;
+            position: relative; }
+            .header__nav .header__desktop .header__menu .header__element .header__link {
+              color: #fafafa;
+              font-size: 18px;
+              text-decoration: none; }
+              .header__nav .header__desktop .header__menu .header__element .header__link:hover {
+                color: #FF0001;
+                text-shadow: 0px 0px 10px #FF0001; }
+            .header__nav .header__desktop .header__menu .header__element .header__submenu {
+              background-color: transparent;
+              border: none; }
+              .header__nav .header__desktop .header__menu .header__element .header__submenu .header__sublink {
+                color: #fafafa; }
+                .header__nav .header__desktop .header__menu .header__element .header__submenu .header__sublink:hover {
+                  background-color: #FF0001;
+                  color: #000;
+                  text-shadow: 0px 0px 10px #FF0001; }
+        .header__nav .header__desktop .header__star {
+          margin: 8px;
+          width: 50px;
+          height: 50px; } }
 
 .presentation {
   display: flex;
@@ -96,9 +138,16 @@ body {
   height: 100vh; }
   .presentation__video-desktop {
     display: none; }
+    @media screen and (min-width: 768px) {
+      .presentation__video-desktop {
+        display: inline-block;
+        filter: brightness(50%); } }
   .presentation__video-mobile {
     width: 100%;
     filter: brightness(50%); }
+    @media screen and (min-width: 768px) {
+      .presentation__video-mobile {
+        display: none; } }
   .presentation__title {
     margin: 0;
     display: flex;
@@ -109,9 +158,12 @@ body {
       position: relative;
       z-index: 100;
       width: 250px; }
+      @media screen and (min-width: 768px) {
+        .presentation__title .presentation__img {
+          width: 450px; } }
     .presentation__title .presentation__star {
       position: absolute;
-      width: 200px;
+      width: 250px;
       animation-name: spinning;
       animation-iteration-count: infinite;
       animation-duration: 3s;
@@ -120,25 +172,74 @@ body {
 /* Sección Nosotros*/
 .about-us {
   color: #fafafa; }
+  @media screen and (min-width: 576px) {
+    .about-us {
+      width: 80%;
+      margin: 0 auto; } }
+  @media screen and (min-width: 768px) {
+    .about-us {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: repeat(2, min-content); } }
   .about-us__title {
-    text-align: center; }
+    text-align: center;
+    color: #FF0001;
+    grid-column: 1/3; }
   .about-us__img {
     width: 100%; }
+    @media screen and (min-width: 768px) {
+      .about-us__img {
+        display: none; } }
 
 /* Sección Álbums */
 .album {
   color: #fafafa; }
   .album__title {
-    text-align: center; }
+    text-align: center;
+    color: #FF0001; }
   .album__discography {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    .album__discography .album__disc {
-      text-align: center; }
-      .album__discography .album__disc .album__image {
-        width: 200px;
-        height: 200px; }
+    padding: 0 16px; }
+    @media screen and (min-width: 576px) {
+      .album__discography {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        justify-items: center; } }
+    @media screen and (min-width: 922px) {
+      .album__discography {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (min-width: 1200px) {
+      .album__discography {
+        grid-template-columns: repeat(4, 1fr); } }
+    .album__discography .album__link {
+      color: #fafafa;
+      text-decoration: none; }
+      .album__discography .album__link:hover {
+        color: #FF0001;
+        text-shadow: 0px 0px 10px #FF0001; }
+      .album__discography .album__link .album__disc {
+        width: min-content;
+        display: flex;
+        align-items: center;
+        margin: 10px 0; }
+        @media screen and (min-width: 576px) {
+          .album__discography .album__link .album__disc {
+            flex-direction: column; } }
+        .album__discography .album__link .album__disc .album__image {
+          width: 170px;
+          height: 170px; }
+          @media screen and (min-width: 576px) {
+            .album__discography .album__link .album__disc .album__image {
+              margin: 10px 0;
+              width: 200px;
+              height: 200px; } }
+        .album__discography .album__link .album__disc .album__name {
+          width: 100%;
+          text-align: center; }
 
 /* Sección Eventos */
 .events {
