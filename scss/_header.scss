@@ -4,76 +4,102 @@
     position: absolute;
     z-index: 200;
 
-    &__button-nav {
-        position: absolute;
-        border: none;
-        background-color: transparent;
-        margin: 20px;
-        @include sizes (32px, 32px)
-    }
-
-    &__offcanvas {
+    &__nav {
         position: relative;
-        height: 100vh;
-        background-color: $black;
-        color: $white;
+        padding: 0;
 
-        .header__button-close {
+        .header__button-nav {
+            position: absolute;
+            top: 0;
             border: none;
             background-color: transparent;
+            margin: 20px;
             @include sizes (32px, 32px)
         }
 
-        .header__nav {
-            padding: 5px;
+        .header__offcanvas {
+            position: relative;
+            background-color: $black;
+            color: $white;
+            @include sizes (100%, 100vh);
 
-            .header__container {
-                width: 100%;
-                padding: 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            .header__button-close {
+                border: none;
+                background-color: transparent;
+                @include sizes (32px, 32px)
+            }
 
-                .header__dropdown {
-                    order: 4;
-                    display: block;
-                    width: 100%;
+            .header__offcanvas-elements {
+                color: $white;
 
-                    .header__link {
-                        color: $white;
-                        font-size: $nav;
-                        text-decoration: none;
+                .header__link {
+                    color: $white;
+                    font-size: $nav;
+                    text-decoration: none;
+        
+                    &:hover {
+                        color: $red-logo;
+                        text-shadow: 0px 0px 10px $red-logo;
+                    }
+                }
     
+                .header__submenu {
+                    background-color: $black;
+        
+                    .header__sublink {
+                        color: $white;
+                        font-size: $text;
+        
                         &:hover {
+                            background-color: transparent;
                             color: $red-logo;
                             text-shadow: 0px 0px 10px $red-logo;
                         }
                     }
+                }
+            }    
+        }
+        
+        .header__star {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+            @include sizes (80px, 80px)
+        }
 
-                    .header__submenu {
-                        background-color: $black;
-    
-                        .header__sublink {
-                            color: $white;
-                            font-size: $text;
-    
-                            &:hover {
-                                background-color: transparent;
-                                color: $red-logo;
-                                text-shadow: 0px 0px 10px $red-logo;
-                            }
-                        }
-                    }
+        .header__desktop {
+            display: none;
+        }
+    }     
+}
+
+@media screen and (min-width: 768px) {
+
+    .header{
+        display: flex;
+
+        &__button-nav {
+            display: none;
+        }
+
+        &__offcanvas {
+            display: none;
+        }
+
+        &__nav {
+            width: 100%;
+
+            .header__desktop {
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                .header__menu {
+
                 }
             }
-        }    
+        }
     }
     
-    &__star {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translate(-50%);
-        @include sizes (80px, 80px)
-    }
 }

@@ -22,91 +22,146 @@
     <!-- Header -->
     <header class="header" id="header">
         <!-- Menú de navegación -->
-        <button class="header__button-nav" type="button" id="OpenMenu">
-            <span>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
-                    class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512">
-                    <path fill="#FF0001"
-                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
-                    </path>
-                </svg>
-            </span>
-        </button>
-        <!-- Offcanvas -->
-        <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
-            tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
+        <nav class="header__nav navbar navbar-expand-lg" id="navBar">
+            <!-- Botón de apertura -->
+            <button class="header__button-nav" type="button" id="OpenMenu">
+                <span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="#FF0001"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+            <!-- Offcanvas -->
+            <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <!-- Encabezado -->
+                <div class="offcanvas-header">
+                    <!-- Logo -->
+                    <a class="header__logo" href="index.html" id="logo">
+                        <img src="images/logo.png" alt="logo" title="Slipknot">
+                    </a>
+                    <!-- Botón de cierre -->
+                    <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                            <path fill-rule="evenodd"
+                                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Contenido -->
+                <div class="header__offcanvas-elements offcanvas-body">
+                    <!-- Menú -->
+                    <ul class="header__menu navbar-nav">
+                        <!-- Elementos del menú -->
+                        <li class="header__element nav-item">
+                            <a class="header__link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                            <a class="header__link" href="#aboutUs">Nosotros</a>
+                        </li>
+                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                            <a class="header__link" href="#proxEvents">Presentaciones</a>
+                        </li>
+                        <!-- Submenú -->
+                        <li class="header__element nav-item dropdown">
+                            <!-- Flecha de despliegue -->
+                            <a class="header__link navLink dropdown-toggle" href="pages/tienda.html"
+                                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tienda
+                            </a>
+                            <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- Elementos del submenú -->
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="pages/tienda.html#mascaras">Máscaras</a>
+                                </li>
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="pages/tienda.html#prendas">Prendas de
+                                        vestir</a>
+                                </li>
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="pages/tienda.html#accesorios">Polainas de cuello</a>
+                                </li>
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="pages/tienda.html#miscelanea">Miscelánea</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__element nav-item">
+                            <a class="header__link" href="pages/contactos.html">Contactos</a>
+                        </li>
+                    </ul>
+                    <!-- Logo Secundario -->
+                    <img class="header__star" src="images/star_2.png" alt="star" title="Slipknot star">
+                </div>
+            </div>
+            <!-- Navbar -->
+            <div class="header__desktop">
+                <!-- Menú -->
                 <!-- Logo -->
                 <a class="header__logo" href="index.html" id="logo">
                     <img src="images/logo.png" alt="logo" title="Slipknot">
                 </a>
-                <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
-                        <path fill-rule="evenodd"
-                            d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
-                    </svg>
-                </button>
-            </div>
-            <div class="offcanvas-body">
-                <nav class="header__nav navbar navbar-expand-lg" id="navBar">
-                    <div class="header__container container-fluid">
-                        <!-- Elementos del menú -->
-                        <div class="header__dropdown collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="header__menu navbar-nav">
-                                <li class="header__element nav-item">
-                                    <a class="header__link" aria-current="page" href="index.html">Inicio</a>
-                                </li>
-                                <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                                    <a class="header__link" href="#aboutUs">Nosotros</a>
-                                </li>
-                                <li class="header__element nav-item">
-                                    <a class="header__link" href="#proxEvents">Presentaciones</a>
-                                </li>
-                                <!-- Submenú -->
-                                <li class="header__element nav-item dropdown">
-                                    <!-- Flecha de despliegue -->
-                                    <a class="header__link navLink dropdown-toggle" href="pages/tienda.html"
-                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Tienda
-                                    </a>
-                                    <!-- Elementos del submenú -->
-                                    <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li>
-                                            <a class="header__sublink dropdown-item"
-                                                href="pages/tienda.html#mascaras">Máscaras</a>
-                                        </li>
-                                        <li>
-                                            <a class="header__sublink dropdown-item"
-                                                href="pages/tienda.html#prendas">Prendas de
-                                                vestir</a>
-                                        </li>
-                                        <li>
-                                            <a class="header__sublink dropdown-item"
-                                                href="pages/tienda.html#accesorios">Polainas de cuello</a>
-                                        </li>
-                                        <li>
-                                            <a class="header__sublink dropdown-item"
-                                                href="pages/tienda.html#miscelanea">Miscelánea</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="header__element nav-item">
-                                    <a class="header__link" href="pages/contactos.html">Contactos</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <ul class="header__menu navbar-nav">
+                    <!-- Elementos del menú -->
+                    <li class="header__element nav-item">
+                        <a class="header__link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                        <a class="header__link" href="#aboutUs">Nosotros</a>
+                    </li>
+                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                        <a class="header__link" href="#proxEvents">Presentaciones</a>
+                    </li>
+                    <!-- Submenú -->
+                    <li class="header__element nav-item dropdown">
+                        <!-- Flecha de despliegue -->
+                        <a class="header__link navLink dropdown-toggle" href="pages/tienda.html"
+                            id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Tienda
+                        </a>
+                        <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- Elementos del submenú -->
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="pages/tienda.html#mascaras">Máscaras</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="pages/tienda.html#prendas">Prendas de
+                                    vestir</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="pages/tienda.html#accesorios">Polainas de cuello</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="pages/tienda.html#miscelanea">Miscelánea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__element nav-item">
+                        <a class="header__link" href="pages/contactos.html">Contactos</a>
+                    </li>
+                </ul>
                 <!-- Logo Secundario -->
                 <img class="header__star" src="images/star_2.png" alt="star" title="Slipknot star">
             </div>
-        </div>
+        </nav>
     </header>
     <!-- Main -->
     <main>
