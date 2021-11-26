@@ -171,25 +171,52 @@ body {
 
 /* Sección Nosotros*/
 .about-us {
-  color: #fafafa; }
+  color: #fafafa;
+  text-align: center; }
   @media screen and (min-width: 576px) {
     .about-us {
       width: 80%;
       margin: 0 auto; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     .about-us {
       display: grid;
       grid-template-columns: 2fr 3fr;
-      grid-template-rows: repeat(2, min-content); } }
+      grid-template-rows: min-content 1fr; } }
   .about-us__title {
     text-align: center;
-    color: #FF0001;
-    grid-column: 1/3; }
+    color: #FF0001; }
+    @media screen and (min-width: 992px) {
+      .about-us__title {
+        text-align: left;
+        grid-column: 2/3;
+        padding-left: 16px; } }
   .about-us__img {
-    width: 100%; }
-    @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 500px; }
+    @media screen and (min-width: 992px) {
       .about-us__img {
         display: none; } }
+  .about-us__carousel {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+    max-width: 380px; }
+    .about-us__carousel-img {
+      max-width: 380px; }
+    .about-us__carousel .about-us__indicator-container {
+      margin-bottom: 0; }
+      .about-us__carousel .about-us__indicator-container .about-us__indicator {
+        margin-bottom: 10;
+        width: 20px;
+        background-color: #FF0001; }
+    .about-us__carousel .about-us__caption {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px; }
+  .about-us__text {
+    padding-left: 16px;
+    text-align: left;
+    align-self: center; }
 
 /* Sección Álbums */
 .album {
