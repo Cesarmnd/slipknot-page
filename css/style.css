@@ -249,13 +249,13 @@ body {
         color: #FF0001;
         text-shadow: 0px 0px 10px #FF0001; }
       .album__discography .album__link .album__disc {
-        width: min-content;
         display: flex;
         align-items: center;
         margin: 10px 0; }
         @media screen and (min-width: 576px) {
           .album__discography .album__link .album__disc {
-            flex-direction: column; } }
+            flex-direction: column;
+            width: min-content; } }
         .album__discography .album__link .album__disc .album__image {
           width: 170px;
           height: 170px; }
@@ -270,16 +270,22 @@ body {
 
 /* Sección Eventos */
 .events {
-  color: #fafafa;
-  width: 80%;
-  margin: 0 auto; }
+  color: #fafafa; }
   @media screen and (min-width: 768px) {
     .events {
+      width: 80%;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 3fr 2fr;
       grid-template-rows: min-content 1fr; } }
+  @media screen and (min-width: 992px) {
+    .events {
+      grid-template-columns: 2fr 3fr; } }
   .events__title {
     text-align: center; }
+    @media screen and (min-width: 768px) {
+      .events__title {
+        text-align: left; } }
   .events__img-container {
     text-align: center;
     grid-column: 2/3;
@@ -288,6 +294,8 @@ body {
     width: 100%;
     height: 100%; }
     .events__img-container .events__img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center; }
   .events__list {

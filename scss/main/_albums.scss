@@ -39,13 +39,13 @@
             }
 
             .album__disc {
-                width: min-content;
                 display: flex;
                 align-items: center;
                 margin: 10px 0;
     
                 @media screen and (min-width:576px) {
-                    flex-direction: column ;
+                    flex-direction: column;
+                    width: min-content;
                 }
     
                 .album__image {
