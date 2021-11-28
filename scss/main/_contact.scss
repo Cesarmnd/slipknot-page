@@ -86,4 +86,10 @@
             margin-right: 10px;
         }
     }
+
+    &__buttons {
+        display: flex;
+        margin: 15px 0;
+        justify-content: space-between;
+    }
 }

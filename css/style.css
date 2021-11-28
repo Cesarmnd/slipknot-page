@@ -369,6 +369,10 @@ body {
     align-items: center; }
     .contact__suscription-button {
       margin-right: 10px; }
+  .contact__buttons {
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between; }
 
 .button-top {
   display: none; }
