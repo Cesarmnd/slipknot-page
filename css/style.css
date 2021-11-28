@@ -25,12 +25,18 @@ body {
   .header__nav {
     position: relative;
     padding: 0; }
+    .header__nav .header__logo--pages {
+      margin: 11px 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%); }
     .header__nav .header__button-nav {
       position: absolute;
       top: 0;
       border: none;
       background-color: transparent;
-      margin: 20px;
+      margin: 20px 16px;
       width: 32px;
       height: 32px; }
     .header__nav .header__offcanvas {
@@ -86,6 +92,7 @@ body {
 @media screen and (min-width: 992px) {
   .header {
     display: flex;
+    position: relative;
     width: 100%;
     height: auto; }
     .header__button-nav {
@@ -94,6 +101,8 @@ body {
       display: none; }
     .header__nav {
       width: 100%; }
+      .header__nav .header__logo--pages {
+        display: none; }
       .header__nav .header__desktop {
         display: flex;
         align-items: center;
@@ -214,7 +223,7 @@ body {
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px; }
   .about-us__text {
-    padding-left: 16px;
+    padding: 0 16px;
     text-align: left;
     align-self: center; }
 
@@ -282,7 +291,8 @@ body {
     .events {
       grid-template-columns: 2fr 3fr; } }
   .events__title {
-    text-align: center; }
+    text-align: center;
+    color: #FF0001; }
     @media screen and (min-width: 768px) {
       .events__title {
         text-align: left; } }
@@ -300,6 +310,65 @@ body {
       object-position: center; }
   .events__list {
     list-style-position: inside; }
+
+.contact {
+  position: relative;
+  top: 70px;
+  color: #fafafa;
+  padding: 0 16px; }
+  @media screen and (min-width: 992px) {
+    .contact {
+      top: 0; } }
+  .contact__title {
+    font-size: 45px;
+    color: #FF0001;
+    text-align: center; }
+  .contact__personal-info {
+    border: 1px solid #fafafa;
+    padding: 5px; }
+    .contact__personal-info .contact__legend {
+      padding: 0 5px;
+      float: none;
+      width: auto; }
+    .contact__personal-info .contact__label {
+      display: block; }
+    .contact__personal-info .contact__input {
+      width: 100%; }
+  .contact__gender {
+    border: 1px solid #fafafa;
+    padding: 5px; }
+    .contact__gender .contact__legend {
+      padding: 0 5px;
+      float: none;
+      width: auto; }
+    .contact__gender .contact__radio {
+      margin-right: 20px; }
+  .contact__extra-info {
+    border: 1px solid #fafafa;
+    padding: 5px; }
+    .contact__extra-info .contact__legend {
+      float: none;
+      width: auto;
+      padding: 5px; }
+    .contact__extra-info .contact__label {
+      display: block; }
+    .contact__extra-info .contact__input {
+      width: 100%; }
+  .contact__comment {
+    border: 1px solid #fafafa;
+    padding: 5px; }
+    .contact__comment .contact__legend {
+      float: none;
+      width: auto;
+      padding: 0 5px; }
+    .contact__comment .contact__com-box {
+      width: 100%; }
+  .contact__suscription {
+    display: flex;
+    width: 100%;
+    align-items: center; }
+    .contact__suscription-button {
+      margin-right: 10px; }
 
 .button-top {
   display: none; }

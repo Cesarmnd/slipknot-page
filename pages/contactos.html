@@ -20,92 +20,187 @@
 
 <body>
     <!-- Header -->
-    <header class="navCont" id="header">
+    <header class="header" id="header">
         <!-- Menú de navegación -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a href="../index.html" id="logo"><img src="../images/logo.png" alt="logo" title="Slipknot"></a>
-                <!-- Botón de despliegue -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Elementos del menú -->
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="navLink" aria-current="page" href="../index.html">Inicio</a>
+        <nav class="header__nav navbar navbar-expand-lg" id="navBar">
+            <!-- Logo para Mobile -->
+            <a class="header__logo header__logo--pages" href="../index.html" id="logo">
+                <img src="../images/logo.png" alt="logo" title="Slipknot">
+            </a>
+            <!-- Botón de apertura -->
+            <button class="header__button-nav" type="button" id="OpenMenu">
+                <span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="#FF0001"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+            <!-- Offcanvas -->
+            <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <!-- Encabezado -->
+                <div class="offcanvas-header">
+                    <!-- Logo -->
+                    <a class="header__logo" href="../index.html" id="logo">
+                        <img src="../images/logo.png" alt="logo" title="Slipknot">
+                    </a>
+                    <!-- Botón de cierre -->
+                    <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                            <path fill-rule="evenodd"
+                                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Contenido -->
+                <div class="header__offcanvas-elements offcanvas-body">
+                    <!-- Menú -->
+                    <ul class="header__menu navbar-nav">
+                        <!-- Elementos del menú -->
+                        <li class="header__element nav-item">
+                            <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navLink" href="../index.html#aboutUs">Nosotros</a>
+                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                            <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navLink" href="../index.html#proxEvents">Presentaciones</a>
+                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                            <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
                         </li>
                         <!-- Submenú -->
-                        <li class="nav-item dropdown">
+                        <li class="header__element nav-item dropdown">
                             <!-- Flecha de despliegue -->
-                            <a class="navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="header__link navLink dropdown-toggle" href="tienda.html"
+                                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Tienda
                             </a>
-                            <!-- Elementos del submenú -->
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item text-white" href="tienda.html#mascaras">Máscaras</a></li>
-                                <li><a class="dropdown-item text-white" href="tienda.html#prendas">Prendas de vestir</a>
+                            <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- Elementos del submenú -->
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="tienda.html#mascaras">Máscaras</a>
                                 </li>
-                                <li><a class="dropdown-item text-white" href="tienda.html#accesorios">Polainas de
-                                        cuello</a></li>
-                                <li><a class="dropdown-item text-white" href="tienda.html#miscelanea">Miscelánea</a>
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="tienda.html#prendas">Prendas de
+                                        vestir</a>
+                                </li>
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="tienda.html#accesorios">Polainas de cuello</a>
+                                </li>
+                                <li>
+                                    <a class="header__sublink dropdown-item"
+                                        href="tienda.html#miscelanea">Miscelánea</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="navLink" href="contactos.html">Contactos</a>
+                        <li class="header__element nav-item">
+                            <a class="header__link" href="contactos.html">Contactos</a>
                         </li>
                     </ul>
+                    <!-- Logo Secundario -->
+                    <img class="header__star header__star--mobile" src="../images/star_2.png" alt="star" title="Slipknot star">
                 </div>
+            </div>
+            <!-- Navbar -->
+            <div class="header__desktop">
+                <!-- Menú -->
+                <!-- Logo -->
+                <a class="header__logo" href="../index.html" id="logo">
+                    <img src="../images/logo.png" alt="logo" title="Slipknot">
+                </a>
+                <ul class="header__menu navbar-nav">
+                    <!-- Elementos del menú -->
+                    <li class="header__element nav-item">
+                        <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                        <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
+                    </li>
+                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                        <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
+                    </li>
+                    <!-- Submenú -->
+                    <li class="header__element nav-item dropdown">
+                        <!-- Flecha de despliegue -->
+                        <a class="header__link navLink dropdown-toggle" href="tienda.html"
+                            id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Tienda
+                        </a>
+                        <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- Elementos del submenú -->
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="tienda.html#mascaras">Máscaras</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="tienda.html#prendas">Prendas de
+                                    vestir</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="tienda.html#accesorios">Polainas de cuello</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item"
+                                    href="tienda.html#miscelanea">Miscelánea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__element nav-item">
+                        <a class="header__link" href="contactos.html">Contactos</a>
+                    </li>
+                </ul>
                 <!-- Logo Secundario -->
-                <img src="../images/star.png" alt="star" title="Slipknot star" class="secLogo">
+                <img class="header__star" src="../images/star_2.png" alt="star" title="Slipknot star">
             </div>
         </nav>
     </header>
     <!-- Main -->
-    <main class="mainContacto">
-        <h1 class="formTitle">Contáctanos</h1>
-        <form class="formCont" action="" method="">
+    <main class="contact mt-3 mt-md-4 mt-lg-5">
+        <h1 class="contact__title">Contáctanos</h1>
+        <form class="contact__form" action="" method="">
             <!-- Información Personal -->
-            <fieldset class="personalInfo">
-                <legend class="legend">Información personal</legend>
-                <label for="nombre">Nombres:</label>
-                <input type="text" id="nombre" placeholder="Escriba su nombre aquí..." required><br>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" placeholder="Escriba su apellido aquí..." required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Escriba su email aquí..." required><br>
-                <label for="celular">Número de celular:</label>
-                <input type="tel" id="celular" placeholder="Escriba su número aquí..." required><br>
+            <fieldset class="contact__personal-info">
+                <legend class="contact__legend">Información personal</legend>
+                <label class="contact__label" for="nombre">Nombres:</label>
+                <input class="contact__input" type="text" id="nombre" placeholder="Escriba su nombre aquí..." required><br>
+                <label class="contact__label" for="apellido">Apellido:</label>
+                <input class="contact__input" type="text" id="apellido" placeholder="Escriba su apellido aquí..." required><br>
+                <label class="contact__label" for="email">Email:</label>
+                <input class="contact__input" type="email" id="email" placeholder="Escriba su email aquí..." required><br>
+                <label class="contact__label" for="celular">Número de celular:</label>
+                <input class="contact__input" type="tel" id="celular" placeholder="Escriba su número aquí..." required><br>
             </fieldset>
             <!-- Selección de Género -->
-            <fieldset>
-                <legend class="legend">Género</legend>
+            <fieldset class="contact__gender">
+                <legend class="contact__legend">Género</legend>
                 <label for="hombre" id="genero">Hombre</label>
-                <input type="radio" name="genero" value="hombre" id="hombre">
+                <input class="contact__radio" type="radio" name="genero" value="hombre" id="hombre">
                 <label for="mujer" id="genero">Mujer</label>
-                <input type="radio" name="genero" value="mujer" id="mujer">
+                <input class="contact__radio" type="radio" name="genero" value="mujer" id="mujer">
                 <label for="otro" id="genero">Otro</label>
-                <input type="radio" name="genero" value="otro" id="otro">
+                <input class="contact__radio" type="radio" name="genero" value="otro" id="otro">
             </fieldset>
             <!-- Información Adicional -->
-            <fieldset>
-                <legend class="legend">Información adicional</legend>
-                <label for="nacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="nacimiento" min="1000-01-01" max="2999-12-31" required><br>
-                <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" placeholder="Escriba su dirección aquí..." required><br>
-                <label for="pais">País:</label>
+            <fieldset class="contact__extra-info">
+                <legend class="contact__legend">Información adicional</legend>
+                <label class="contact__label" for="nacimiento">Fecha de nacimiento:</label>
+                <input class="contact__input" type="date" id="nacimiento" min="1000-01-01" max="2999-12-31" required><br>
+                <label class="contact__label" for="direccion">Dirección:</label>
+                <input class="contact__input" type="text" id="direccion" placeholder="Escriba su dirección aquí..." required><br>
+                <label class="contact__label" for="pais">País:</label>
                 <select name="pais" id="pais">
                     <option value="default">------</option>
                     <option value="peru">Perú</option>
@@ -121,15 +216,15 @@
                 </select>
             </fieldset>
             <!-- Seción de Comentarios -->
-            <fieldset>
-                <legend class="legend">Comentarios</legend>
-                <label for="proposito" id="commentLabel">Déjanos saber el motivo de tu contacto:</label><br>
-                <textarea class="commentBox" name="proposito" id="proposito" rows="15"
+            <fieldset class="contact__comment">
+                <legend class="contact__legend">Comentarios</legend>
+                <label class="contact__label" for="proposito" id="commentLabel">Déjanos saber el motivo de tu contacto:</label><br>
+                <textarea class="contact__com-box" name="proposito" id="proposito" rows="15"
                     placeholder="Deja un comentario aquí..."></textarea>
             </fieldset>
             <!-- Suscripción a correo -->
-            <div class="formTerms">
-                <input type="checkbox" name="suscripcion" id="suscripcion">
+            <div class="contact__suscription">
+                <input class="contact__suscription-button" type="checkbox" name="suscripcion" id="suscripcion">
                 <label for="suscripcion" id="terminos">"Acepto recibir a mi correo electrónico ofertas y noticias
                     relevantes sobre la banda."</label>
             </div>
@@ -190,6 +285,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
+
+    <!-- Mis Scripts -->
+    <script src="../scripts/code.js"></script>
 </body>
 
 </html>

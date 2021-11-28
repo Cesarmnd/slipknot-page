@@ -4,6 +4,11 @@
     height: $height;
 }
 
+@mixin fieldset ($border, $padding) {
+    border: $border;
+    padding: $padding;
+}
+
 @keyframes spinning {
     0% {
         transform: translate(0deg);

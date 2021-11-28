@@ -8,12 +8,20 @@
         position: relative;
         padding: 0;
 
+        .header__logo--pages {
+            margin: 11px 0;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
         .header__button-nav {
             position: absolute;
             top: 0;
             border: none;
             background-color: transparent;
-            margin: 20px;
+            margin: 20px 16px;
             @include sizes (32px, 32px)
         }
 
@@ -97,6 +105,7 @@
 
     .header{
         display: flex;
+        position: relative;
         @include sizes (100%, auto);
 
         &__button-nav {
@@ -109,6 +118,10 @@
 
         &__nav {
             width: 100%;
+
+            .header__logo--pages {
+                display: none;
+            }
 
             .header__desktop {
                 display: flex;
