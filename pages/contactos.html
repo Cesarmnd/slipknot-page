@@ -186,18 +186,21 @@
             <!-- Selección de Género -->
             <fieldset class="contact__gender">
                 <legend class="contact__legend">Género</legend>
-                <label for="hombre" id="genero">Hombre</label>
-                <input class="contact__radio" type="radio" name="genero" value="hombre" id="hombre">
-                <label for="mujer" id="genero">Mujer</label>
-                <input class="contact__radio" type="radio" name="genero" value="mujer" id="mujer">
-                <label for="otro" id="genero">Otro</label>
-                <input class="contact__radio" type="radio" name="genero" value="otro" id="otro">
+                <label for="hombre" id="genero">
+                    Hombre <input class="contact__radio" type="radio" name="genero" value="hombre" id="hombre">
+                </label>
+                <label for="mujer" id="genero">
+                    Mujer <input class="contact__radio" type="radio" name="genero" value="mujer" id="mujer">
+                </label>
+                <label for="otro" id="genero">
+                    Otro <input class="contact__radio" type="radio" name="genero" value="otro" id="otro">
+                </label>
             </fieldset>
             <!-- Información Adicional -->
             <fieldset class="contact__extra-info">
                 <legend class="contact__legend">Información adicional</legend>
                 <label class="contact__label" for="nacimiento">Fecha de nacimiento:</label>
-                <input class="contact__input" type="date" id="nacimiento" min="1000-01-01" max="2999-12-31" required><br>
+                <input type="date" id="nacimiento" min="1000-01-01" max="2999-12-31" required><br>
                 <label class="contact__label" for="direccion">Dirección:</label>
                 <input class="contact__input" type="text" id="direccion" placeholder="Escriba su dirección aquí..." required><br>
                 <label class="contact__label" for="pais">País:</label>

@@ -312,67 +312,95 @@ body {
     list-style-position: inside; }
 
 .contact {
-  position: relative;
-  top: 70px;
+  display: grid;
+  grid-template-rows: 72px min-content 1fr;
   color: #fafafa;
   padding: 0 16px; }
+  @media screen and (min-width: 576px) {
+    .contact {
+      width: 60%;
+      margin: 0 auto; } }
   @media screen and (min-width: 992px) {
     .contact {
-      top: 0; } }
+      width: 45%;
+      max-width: 630px;
+      display: block; } }
   .contact__title {
     font-size: 45px;
     color: #FF0001;
-    text-align: center; }
-  .contact__personal-info {
-    border: 1px solid #fafafa;
-    padding: 5px; }
-    .contact__personal-info .contact__legend {
-      padding: 0 5px;
-      float: none;
-      width: auto; }
-    .contact__personal-info .contact__label {
-      display: block; }
-    .contact__personal-info .contact__input {
-      width: 100%; }
-  .contact__gender {
-    border: 1px solid #fafafa;
-    padding: 5px; }
-    .contact__gender .contact__legend {
-      padding: 0 5px;
-      float: none;
-      width: auto; }
-    .contact__gender .contact__radio {
-      margin-right: 20px; }
-  .contact__extra-info {
-    border: 1px solid #fafafa;
-    padding: 5px; }
-    .contact__extra-info .contact__legend {
-      float: none;
-      width: auto;
-      padding: 5px; }
-    .contact__extra-info .contact__label {
-      display: block; }
-    .contact__extra-info .contact__input {
-      width: 100%; }
-  .contact__comment {
-    border: 1px solid #fafafa;
-    padding: 5px; }
-    .contact__comment .contact__legend {
-      float: none;
-      width: auto;
-      padding: 0 5px; }
-    .contact__comment .contact__com-box {
-      width: 100%; }
-  .contact__suscription {
-    display: flex;
-    width: 100%;
-    align-items: center; }
-    .contact__suscription-button {
-      margin-right: 10px; }
-  .contact__buttons {
-    display: flex;
-    margin: 15px 0;
-    justify-content: space-between; }
+    text-align: center;
+    grid-row: 2/3; }
+  .contact__form {
+    grid-row: 3/4; }
+    .contact__form .contact__personal-info {
+      border: 1px solid #fafafa;
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .contact__form .contact__personal-info .contact__legend {
+        padding: 0 5px;
+        margin: 0;
+        float: none;
+        width: auto; }
+      .contact__form .contact__personal-info .contact__label {
+        display: block; }
+      .contact__form .contact__personal-info .contact__input {
+        width: 100%; }
+    .contact__form .contact__gender {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #fafafa;
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .contact__form .contact__gender .contact__legend {
+        padding: 0 5px;
+        margin: 0;
+        float: none;
+        width: auto; }
+      .contact__form .contact__gender .contact__radio {
+        margin: 8px; }
+    .contact__form .contact__extra-info {
+      border: 1px solid #fafafa;
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .contact__form .contact__extra-info .contact__legend {
+        float: none;
+        width: auto;
+        padding: 5px;
+        margin: 0; }
+      .contact__form .contact__extra-info .contact__label {
+        display: block; }
+      .contact__form .contact__extra-info .contact__input {
+        width: 100%; }
+    .contact__form .contact__comment {
+      border: 1px solid #fafafa;
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .contact__form .contact__comment .contact__legend {
+        float: none;
+        width: auto;
+        padding: 0 5px;
+        margin: 0; }
+      .contact__form .contact__comment .contact__com-box {
+        width: 100%; }
+    .contact__form .contact__suscription {
+      margin-top: 15px;
+      display: flex;
+      width: 100%;
+      align-items: center; }
+      .contact__form .contact__suscription-button {
+        margin-right: 10px; }
+    .contact__form .contact__buttons {
+      display: flex;
+      margin: 15px 0;
+      justify-content: space-between; }
 
 .button-top {
   display: none; }

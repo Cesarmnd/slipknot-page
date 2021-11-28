@@ -4,9 +4,12 @@
     height: $height;
 }
 
-@mixin fieldset ($border, $padding) {
+@mixin fieldset ($border, $padding-top, $padding-bottom, $padding-left, $padding-right) {
     border: $border;
-    padding: $padding;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    padding-left: $padding-left;
+    padding-right: $padding-right;
 }
 
 @keyframes spinning {
