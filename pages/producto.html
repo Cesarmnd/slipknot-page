@@ -174,7 +174,7 @@
         <!-- Información del producto -->
         <section class="product__section">
             <div class="product__info">
-                <h1>Nombre del Producto</h1>
+                <h1 class="product__name">Nombre del Producto</h1>
                 <!-- Descripción del producto -->
                 <h2>Descripción:</h2>
                 <p>(Descripción a reemplazar por el objeto elegido) => Esta bolsa es de color rojo posee unas
@@ -183,10 +183,10 @@
             </div>
             <!-- Cantidad -->
             <div class="product__quantity">
-                <h2>Cantidad:</h2>
-                <input type="button" name="remove" id="remove" value="-">
+                <h2 class="product__subtitle">Cantidad:</h2>
+                <input class="product__button-quantity" type="button" name="remove" id="remove" value="-">
                 <p>0</p>
-                <input type="button" name="add" id="add" value="+">
+                <input class="product__button-quantity" type="button" name="add" id="add" value="+">
             </div>
             <!-- Precio -->
             <div class="product__price">
@@ -196,26 +196,26 @@
             <div class="product__buttons-container">
                 <!-- Botón de regreso -->
                 <a href="tienda.html">
-                    <input type="button" name="retStore" id="retStore" value="Regresar">
+                    <input class="product__button" type="button" name="retStore" id="retStore" value="Regresar">
                 </a>
                 <!-- Botón de añadir al carrito e ir al carrito -->
-                <button type="button" class="addCartButton" id="liveToastBtn">Añadir al carrito</button>
+                <button class="product__button" type="button" id="liveToastBtn">Añadir al carrito</button>
                 <!-- Mensaje de confirmación -->
-                <div class="toastCont position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div class="product__toast position-fixed bottom-0 end-0 p-3" style="z-index: 11">
                     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-header">
+                        <div class="product__toast-header toast-header">
                             <strong class="me-auto">Sistema</strong>
                             <small>Justo ahora</small>
                             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
-                        <div class="toast-body">
+                        <div class="product__toast-body toast-body">
                             ¡Su producto fue añadido exitosamente!
                         </div>
                     </div>
                 </div>
                 <!-- Botón de ver carrito -->
                 <a href="carrito.html">
-                    <input type="button" name="cart" id="cartInfo" value="Ver carrito">
+                    <input class="product__button" type="button" name="cart" id="cartInfo" value="Ver carrito">
                 </a>
             </div>
         </section>
