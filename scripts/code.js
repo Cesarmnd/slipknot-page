@@ -1,3 +1,4 @@
+// Toast para Sección Producto
 var toastTrigger = document.getElementById('liveToastBtn')
 var toastLiveExample = document.getElementById('liveToast')
 if (toastTrigger) {
@@ -7,7 +8,7 @@ if (toastTrigger) {
     })
 }
 
-
+// Nav para resolución Mobile
 document.addEventListener("DOMContentLoaded", function(){
     var myOffcanvas = document.getElementById('offcanvasExample');
     var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);

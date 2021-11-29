@@ -20,106 +20,188 @@
 
 <body>
     <!-- Header -->
-    <header class="navCont" id="header">
+    <header class="header" id="header">
         <!-- Menú de navegación -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a href="../index.html" id="logo">
-                    <img src="../images/logo.png" alt="logo" title="Slipknot">
-                </a>
-                <!-- Botón de despliegue -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Elementos del menú -->
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="navLink" aria-current="page" href="../index.html">Inicio</a>
+        <nav class="header__nav navbar navbar-expand-lg" id="navBar">
+            <!-- Logo para Mobile -->
+            <a class="header__logo header__logo--pages" href="../index.html" id="logo">
+                <img src="../images/logo.png" alt="logo" title="Slipknot">
+            </a>
+            <!-- Botón de apertura -->
+            <button class="header__button-nav" type="button" id="OpenMenu">
+                <span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="#FF0001"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+            <!-- Offcanvas -->
+            <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <!-- Encabezado -->
+                <div class="offcanvas-header">
+                    <!-- Logo -->
+                    <a class="header__logo" href="../index.html" id="logo">
+                        <img src="../images/logo.png" alt="logo" title="Slipknot">
+                    </a>
+                    <!-- Botón de cierre -->
+                    <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                            <path fill-rule="evenodd"
+                                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Contenido -->
+                <div class="header__offcanvas-elements offcanvas-body">
+                    <!-- Menú -->
+                    <ul class="header__menu navbar-nav">
+                        <!-- Elementos del menú -->
+                        <li class="header__element nav-item">
+                            <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navLink" href="../index.html#aboutUs">Nosotros</a>
+                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                            <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navLink" href="../index.html#proxEvents">Presentaciones</a>
+                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                            <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
                         </li>
                         <!-- Submenú -->
-                        <li class="nav-item dropdown">
+                        <li class="header__element nav-item dropdown">
                             <!-- Flecha de despliegue -->
-                            <a class="navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="header__link navLink dropdown-toggle" href="tienda.html"
+                                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Tienda
                             </a>
-                            <!-- Elementos del submenú -->
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- Elementos del submenú -->
                                 <li>
-                                    <a class="dropdown-item text-white" href="tienda.html#mascaras">Máscaras</a>
+                                    <a class="header__sublink dropdown-item" href="tienda.html#mascaras">Máscaras</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-white" href="tienda.html#prendas">Prendas de vestir</a>
+                                    <a class="header__sublink dropdown-item" href="tienda.html#prendas">Prendas de
+                                        vestir</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-white" href="tienda.html#accesorios">Polainas de
+                                    <a class="header__sublink dropdown-item" href="tienda.html#accesorios">Polainas de
                                         cuello</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-white" href="tienda.html#miscelanea">Miscelánea</a>
+                                    <a class="header__sublink dropdown-item"
+                                        href="tienda.html#miscelanea">Miscelánea</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="navLink" href="contactos.html">Contactos</a>
+                        <li class="header__element nav-item">
+                            <a class="header__link" href="contactos.html">Contactos</a>
                         </li>
                     </ul>
+                    <!-- Logo Secundario -->
+                    <img class="header__star header__star--mobile" src="../images/star_2.png" alt="star"
+                        title="Slipknot star">
                 </div>
+            </div>
+            <!-- Navbar -->
+            <div class="header__desktop">
+                <!-- Menú -->
+                <!-- Logo -->
+                <a class="header__logo" href="../index.html" id="logo">
+                    <img src="../images/logo.png" alt="logo" title="Slipknot">
+                </a>
+                <ul class="header__menu navbar-nav">
+                    <!-- Elementos del menú -->
+                    <li class="header__element nav-item">
+                        <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                        <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
+                    </li>
+                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+                        <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
+                    </li>
+                    <!-- Submenú -->
+                    <li class="header__element nav-item dropdown">
+                        <!-- Flecha de despliegue -->
+                        <a class="header__link navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tienda
+                        </a>
+                        <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- Elementos del submenú -->
+                            <li>
+                                <a class="header__sublink dropdown-item" href="tienda.html#mascaras">Máscaras</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item" href="tienda.html#prendas">Prendas de
+                                    vestir</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item" href="tienda.html#accesorios">Polainas de
+                                    cuello</a>
+                            </li>
+                            <li>
+                                <a class="header__sublink dropdown-item" href="tienda.html#miscelanea">Miscelánea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__element nav-item">
+                        <a class="header__link" href="contactos.html">Contactos</a>
+                    </li>
+                </ul>
                 <!-- Logo Secundario -->
-                <img src="../images/star.png" alt="star" title="Slipknot star" class="secLogo">
+                <img class="header__star" src="../images/star_2.png" alt="star" title="Slipknot star">
             </div>
         </nav>
     </header>
     <!-- Main -->
-    <main class="mainPayment">
+    <main class="payment">
         <!-- "Botón" para regresar a la parte superior de la página -->
-        <div class="topButton">
+        <div class="button-top">
             <a href="#header">
-                <img src="../images/icons/arrow-144-32.png" alt="toparrow" title="Return to top">
+                <img src="../images/icons/arrow-144-32.png" alt="toparrow" title="Volver arriba">
             </a>
         </div>
-        <h1 class="payTitle">Proceso de pago</h1>
+        <h1 class="payment__title">Proceso de pago</h1>
         <!-- Formulario de compra -->
-        <form class="formPayment" action="" method="">
+        <form class="payment__form" action="" method="">
             <!-- Dirección de facturación -->
-            <fieldset class="payAddress">
-                <legend class="legend h5">1. Dirección de facturación</legend>
+            <fieldset class="payment__address">
+                <legend class="payment__legend h5">1. Dirección de facturación</legend>
                 <!-- Información -->
                 <div>
                     <label for="name">Nombres<span>*</span></label>
-                    <input class="longInput" type="text" name="name" id="name" placeholder="Escribe tu nombre aquí...">
+                    <input type="text" name="name" id="name" placeholder="Escribe tu nombre aquí...">
                 </div>
                 <div>
                     <label for="lastName">Apellidos<span>*</span></label>
-                    <input class="longInput" type="text" name="lastName" id="lastName"
+                    <input type="text" name="lastName" id="lastName"
                         placeholder="Escribe tu apellido aquí...">
                 </div>
                 <div>
                     <label for="email">Email<span>*</span></label>
-                    <input class="longInput" type="email" name="email" id="email"
+                    <input type="email" name="email" id="email"
                         placeholder="Escribe tu email aquí...">
                 </div>
                 <div>
                     <label for="telf">Teléfono<span>*</span></label>
                     <input type="tel" name="tel" id="tel" placeholder="Escribe tu número aquí...">
                 </div>
-                <div class="payDir">
+                <div class="payment__direction">
                     <label for="address">Dirección<span>*</span></label>
-                    <input class="longInput" type="text" name="address" id="address"
+                    <input type="text" name="address" id="address"
                         placeholder="Escribe tu dirección aquí...">
-                    <input class="longInput" type="text" name="addressTwo" id="addressTwo">
+                    <input type="text" name="addressTwo" id="addressTwo">
                 </div>
-                <div class="payCountry">
+                <div class="payment__country">
                     <!-- Selección de país -->
                     <label for="country">País<span>*</span></label>
                     <select name="country" id="country">
@@ -153,33 +235,33 @@
                     <label for="postalCode">Código postal<span>*</span></label>
                     <input type="text" name="postalCode" id="postalCode" placeholder="...">
                 </div>
-                <div class="payCheck">
+                <div class="payment__check">
                     <!-- Confirmación de envío -->
                     <input type="checkbox" name="shipInfo" id="shipInfo">
                     <label for="shipInfo" id="shipCom">Hacer el envío a esta dirección.</label>
                 </div>
             </fieldset>
             <!-- Método de pago -->
-            <fieldset class="payMethod">
-                <legend class="legend h5">2. Método de pago</legend>
+            <fieldset class="payment__method">
+                <legend class="payment__legend h5">2. Método de pago</legend>
                 <!-- Información de la tarjeta de crédito -->
-                <div class="cardCont">
+                <div class="payment__card">
                     <input type="radio" name="paymentMethod" id="creditCard">
                     <label for="creditCard">Tarjeta de crédito</label>
-                    <div class="payIcons" id="creditIcons">
+                    <div class="payment__icons" id="creditIcons">
                         <img src="../images/icons/visa-32.png" alt="visa">
                         <img src="../images/icons/mastercard-32.png" alt="masterCard">
                         <img src="../images/icons/amex-32.png" alt="americanExpress">
                     </div>
                 </div>
                 <!-- Datos comerciales de la tarjeta de crédito -->
-                <div class="ownerName">
+                <div class="payment__owner-name">
                     <label for="ownerName">Nombre del propietario<span>*</span></label>
-                    <input class="longInput" type="text" name="ownerName" id="ownerName">
+                    <input type="text" name="ownerName" id="ownerName">
                 </div>
-                <div class="cardNumber">
+                <div class="payment__card-number">
                     <label for="creditNumber">Número de tarjeta<span>*</span></label>
-                    <input class="longInput" type="text" name="creditNumber" id="creditNumber">
+                    <input type="text" name="creditNumber" id="creditNumber">
                 </div>
                 <div>
                     <label for="expDate">Fecha de expiración<span>*</span></label>
@@ -190,23 +272,23 @@
                     <input type="number" name="cvv" id="cvv">
                 </div>
                 <!-- Información de la tarjeta de débito -->
-                <div class="cardCont">
+                <div class="payment__card">
                     <input type="radio" name="paymentMethod" id="debitCard">
                     <label for="debitCard">Tarjeta de débito</label>
-                    <div class="payIcons" id="debitIcons">
+                    <div class="payment__icons" id="debitIcons">
                         <img src="../images/icons/visa-32.png" alt="visaTwo">
                         <img src="../images/icons/mastercard-32.png" alt="masterCardTwo">
                         <img src="../images/icons/amex-32.png" alt="americanExpressTwo">
                     </div>
                 </div>
                 <!-- Datos comerciales de la tarjeta de débito -->
-                <div class="ownerName">
+                <div class="payment__owner-name">
                     <label for="ownerName">Nombre del propietario<span>*</span></label>
-                    <input class="longInput" type="text" name="ownerName" id="ownerName">
+                    <input type="text" name="ownerName" id="ownerName">
                 </div>
                 <div class="cardNumber">
                     <label for="creditNumber">Número de tarjeta<span>*</span></label>
-                    <input class="longInput" type="text" name="creditNumber" id="creditNumber">
+                    <input type="text" name="creditNumber" id="creditNumber">
                 </div>
                 <div>
                     <label for="expDate">Fecha de expiración<span>*</span></label>
@@ -218,19 +300,19 @@
                 </div>
             </fieldset>
             <!-- Envío -->
-            <fieldset class="payDelivery">
-                <legend class="legend h5">3. Envío</legend>
+            <fieldset class="payment__delivery">
+                <legend class="payment__legend h5">3. Envío</legend>
                 <!-- Información de envío -->
-                <div class="payDir">
+                <div class="payment__direction">
                     <label for="addressShip">Dirección de envío<span>*</span></label>
-                    <input class="longInput" type="text" name="addressShip" id="addressShip">
-                    <input class="longInput" type="text" name="addressShipTwo" id="addressShipTwo">
+                    <input type="text" name="addressShip" id="addressShip">
+                    <input type="text" name="addressShipTwo" id="addressShipTwo">
                 </div>
-                <div class="reference">
+                <div class="payment__reference">
                     <label for="reference">Referencia (Opcional)</label>
-                    <input class="longInput" type="text" name="reference" id="reference">
+                    <input type="text" name="reference" id="reference">
                 </div>
-                <div class="payCountry">
+                <div class="payment__country">
                     <!-- Selección de país -->
                     <label for="countryShip">País<span>*</span></label>
                     <select name="countryShip" id="countryShip">
@@ -283,7 +365,7 @@
             </fieldset>
             <!-- Botón de pago -->
             <div id="payButtonCont">
-                <button type="button" class="paymentButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button class="payment__button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Pagar
                 </button>
                 <!-- Modal -->
@@ -310,56 +392,58 @@
         </form>
     </main>
     <!-- Footer -->
-    <footer class="container-fluid footerCont py-3">
+    <footer class="footer container-fluid py-3">
         <!-- Logo -->
-        <a href="../index.html" id="logoFooter">
-            <img src="../images/logo.png" alt="logoFooter" class="footerLogo">
+        <a href="index.html" id="logoFooter">
+            <img class="footer__logo" src="../images/logo.png" alt="logoFooter">
         </a>
         <!-- Redes Sociales -->
         <!-- Textos -->
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
-                <a href="https://www.facebook.com/slipknot" target="_blank"
-                    class="nav-link px-2 text-muted">Facebook</a>
+                <a class="nav-link px-2 text-muted" href="https://www.facebook.com/slipknot"
+                    target="_blank">Facebook</a>
             </li>
             <li class="nav-item">
-                <a href="https://www.instagram.com/slipknot/" target="_blank"
-                    class="nav-link px-2 text-muted">Instagram</a>
+                <a class="nav-link px-2 text-muted" href="https://www.instagram.com/slipknot/"
+                    target="_blank">Instagram</a>
             </li>
             <li class="nav-item">
-                <a href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                    target="_blank" class="nav-link px-2 text-muted">Twitter</a>
+                <a class="nav-link px-2 text-muted"
+                    href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    target="_blank">Twitter</a>
             </li>
             <li class="nav-item">
-                <a href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank"
-                    class="nav-link px-2 text-muted">Youtube</a>
+                <a class="nav-link px-2 text-muted" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ"
+                    target="_blank">Youtube</a>
             </li>
             <li class="nav-item">
-                <a href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank"
-                    class="nav-link px-2 text-muted">Spotify</a>
+                <a class="nav-link px-2 text-muted" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8"
+                    target="_blank">Spotify</a>
             </li>
         </ul>
         <!-- Íconos -->
-        <div class="footerIcons" id="footerIcons">
-            <a href="https://www.facebook.com/slipknot" target="_blank">
-                <img src="../images/icons/facebook-3-32.png" alt="facebook">
+        <div class="footer__icons-container" id="footerIcons">
+            <a class="footer__link" href="https://www.facebook.com/slipknot" target="_blank">
+                <img src="images/icons/facebook-3-32.png" alt="facebook">
             </a>
-            <a href="https://www.instagram.com/slipknot/" target="_blank">
-                <img src="../images/icons/instagram-32.png" alt="instagram">
+            <a class="footer__link" href="https://www.instagram.com/slipknot/" target="_blank">
+                <img src="images/icons/instagram-32.png" alt="instagram">
             </a>
-            <a href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            <a class="footer__link"
+                href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
                 target="_blank">
-                <img src="../images/icons/twitter-32.png" alt="twitter">
+                <img src="images/icons/twitter-32.png" alt="twitter">
             </a>
-            <a href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">
-                <img src="../images/icons/youtube-32.png" alt="youtube">
+            <a class="footer__link" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">
+                <img src="images/icons/youtube-32.png" alt="youtube">
             </a>
-            <a href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">
-                <img src="../images/icons/spotify-32.png" alt="spotify">
+            <a class="footer__link" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">
+                <img src="images/icons/spotify-32.png" alt="spotify">
             </a>
         </div>
         <!-- Copyright -->
-        <p class="text-center text-muted copyRight">© 2021 Slipknot, Inc</p>
+        <p class="footer__copyright text-center text-muted">© 2021 Slipknot, Inc</p>
     </footer>
     <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -368,6 +452,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
+
+    <!-- Mis Scripts -->
+    <script src="../scripts/code.js"></script>
 </body>
 
 </html>
