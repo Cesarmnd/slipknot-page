@@ -1,0 +1,103 @@
+.store {
+    display: grid;
+    grid-template-rows: 72px min-content 1fr;
+
+    &__banner {
+        grid-row: 2/3;
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .store__title {
+            font-size: $title;
+            color: $red-logo;
+            text-align: center;
+        }
+
+        .store__cart {
+            padding: 0 16px;
+
+            @media screen and (min-width:768px) {
+                position: absolute;
+                right: 0;
+            }
+            .store__cart-link {
+                color: $white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $red-logo;
+                    text-shadow: 0 0 10px $red-logo;
+                }
+            }
+        }
+    }
+
+    &__storage {
+        grid-row: 3/4;
+
+        .store__products {
+            text-align: center;
+            margin: 20px 0;
+            padding: 0 16px;
+            
+            .store__subtitle {
+                color: $white;
+                font-size: $subtitle;
+                margin: 20px 0;
+
+                @media screen and (min-width:768px) {
+                    text-align: left;
+                }
+            }
+
+            .store__gallery {
+
+                @media screen and (min-width:576px) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: repeat(auto-fill, 1fr) ;
+                }
+
+                @media screen and (min-width:768px) {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(auto-fill, 1fr) ;
+                }
+
+                @media screen and (min-width:1200px) {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(auto-fill, 1fr) ;
+                }
+
+                .store__item-container {
+                    text-align: center;
+                    margin: 20px 0;
+
+                    .store__link {
+                        text-decoration: none;
+                        color: $white;
+
+                        &:hover {
+                            color: $red-logo;
+                            text-shadow: 0 0 10px $red-logo;
+                            filter: brightness(150%);
+                        }
+
+                        .store__name {
+                            font-size: $name;
+                        }
+                    }    
+
+                    .store__price {
+                        color: $white;
+                    }
+                }
+            }
+        }    
+    }
+}
