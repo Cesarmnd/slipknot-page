@@ -566,6 +566,36 @@ body {
           background-color: #000;
           border: 1px solid #fafafa; }
 
+.payment {
+  color: #fafafa;
+  display: grid;
+  grid-template-rows: 72px min-content 1fr;
+  padding: 0 16px; }
+  .payment__title {
+    grid-row: 2/3;
+    color: #FF0001; }
+  .payment__form {
+    grid-row: 3/4; }
+    .payment__form .payment__fieldset {
+      border-top: 1px solid #fafafa;
+      margin-bottom: 30px; }
+      .payment__form .payment__fieldset .payment__legend {
+        padding-right: 5px;
+        margin: 10px 0;
+        float: none;
+        width: auto; }
+      .payment__form .payment__fieldset .payment__label {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px; }
+      .payment__form .payment__fieldset .payment__input {
+        width: 100%;
+        margin-bottom: 5px; }
+        .payment__form .payment__fieldset .payment__input--code {
+          width: 40%; }
+      .payment__form .payment__fieldset .payment__select {
+        margin-bottom: 5px; }
+
 .button-top {
   display: none; }
 

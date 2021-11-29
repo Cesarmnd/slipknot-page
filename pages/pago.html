@@ -174,37 +174,37 @@
         <!-- Formulario de compra -->
         <form class="payment__form" action="" method="">
             <!-- Dirección de facturación -->
-            <fieldset class="payment__address">
+            <fieldset class="payment__fieldset">
                 <legend class="payment__legend h5">1. Dirección de facturación</legend>
                 <!-- Información -->
                 <div>
-                    <label for="name">Nombres<span>*</span></label>
-                    <input type="text" name="name" id="name" placeholder="Escribe tu nombre aquí...">
+                    <label class="payment__label" for="name">Nombres<span> *</span></label>
+                    <input class="payment__input" type="text" name="name" id="name" placeholder="Escribe tu nombre aquí...">
                 </div>
                 <div>
-                    <label for="lastName">Apellidos<span>*</span></label>
-                    <input type="text" name="lastName" id="lastName"
+                    <label class="payment__label" for="lastName">Apellidos<span> *</span></label>
+                    <input class="payment__input" type="text" name="lastName" id="lastName"
                         placeholder="Escribe tu apellido aquí...">
                 </div>
                 <div>
-                    <label for="email">Email<span>*</span></label>
-                    <input type="email" name="email" id="email"
+                    <label class="payment__label" for="email">Email<span> *</span></label>
+                    <input class="payment__input" type="email" name="email" id="email"
                         placeholder="Escribe tu email aquí...">
                 </div>
                 <div>
-                    <label for="telf">Teléfono<span>*</span></label>
-                    <input type="tel" name="tel" id="tel" placeholder="Escribe tu número aquí...">
+                    <label class="payment__label" for="telf">Teléfono<span> *</span></label>
+                    <input class="payment__input" type="tel" name="tel" id="tel" placeholder="Escribe tu número aquí...">
                 </div>
                 <div class="payment__direction">
-                    <label for="address">Dirección<span>*</span></label>
-                    <input type="text" name="address" id="address"
+                    <label class="payment__label" for="address">Dirección<span> *</span></label>
+                    <input class="payment__input" type="text" name="address" id="address"
                         placeholder="Escribe tu dirección aquí...">
-                    <input type="text" name="addressTwo" id="addressTwo">
+                    <input class="payment__input" type="text" name="addressTwo" id="addressTwo">
                 </div>
                 <div class="payment__country">
                     <!-- Selección de país -->
-                    <label for="country">País<span>*</span></label>
-                    <select name="country" id="country">
+                    <label class="payment__label" for="country">País<span> *</span></label>
+                    <select class="payment__select" name="country" id="country">
                         <option value="default">------</option>
                         <option value="peru">Perú</option>
                         <option value="chile">Chile</option>
@@ -220,8 +220,8 @@
                 </div>
                 <div>
                     <!-- Selección de ciudad -->
-                    <label for="city">Ciudad<span>*</span></label>
-                    <select name="city" id="city">
+                    <label class="payment__label" for="city">Ciudad<span> *</span></label>
+                    <select class="payment__select" name="city" id="city">
                         <option value="default">------</option>
                         <option value="cityOne">Ciudad 1</option>
                         <option value="cityTwo">Ciudad 2</option>
@@ -232,8 +232,8 @@
                 </div>
                 <div>
                     <!-- Información -->
-                    <label for="postalCode">Código postal<span>*</span></label>
-                    <input type="text" name="postalCode" id="postalCode" placeholder="...">
+                    <label class="payment__label" for="postalCode">Código postal<span>*</span></label>
+                    <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode" placeholder="Codigo Postal">
                 </div>
                 <div class="payment__check">
                     <!-- Confirmación de envío -->

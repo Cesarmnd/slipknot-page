@@ -1,0 +1,46 @@
+.payment {
+    color: $white;
+    display: grid;
+    grid-template-rows: 72px min-content 1fr;
+    padding: 0 16px;
+
+    &__title {
+        grid-row: 2/3;
+        color: $red-logo;
+    }
+
+    &__form {
+        grid-row: 3/4;
+
+        .payment__fieldset {
+            border-top: 1px solid $white;
+            margin-bottom: 30px;
+
+            .payment__legend {
+                padding-right: 5px;
+                margin: 10px 0;
+                float: none;
+                width: auto;
+            }
+
+            .payment__label {
+                display: block;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            .payment__input {
+                width: 100%;
+                margin-bottom: 5px;
+
+                &--code {
+                    width: 40%;
+                }
+            }
+
+            .payment__select {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
