@@ -1,0 +1,10 @@
+.product {
+    display: grid;
+    grid-template-rows: 72px min-content 1fr;
+
+    &__img {
+        width: 250px;
+    }
+
+    
+}

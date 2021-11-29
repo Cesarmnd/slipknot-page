@@ -471,6 +471,12 @@ body {
         .store__storage .store__products .store__gallery .store__item-container .store__price {
           color: #fafafa; }
 
+.product {
+  display: grid;
+  grid-template-rows: 72px min-content 1fr; }
+  .product__img {
+    width: 250px; }
+
 .button-top {
   display: none; }
 
