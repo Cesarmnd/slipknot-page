@@ -1,8 +1,18 @@
 .payment {
-    color: $white;
     display: grid;
     grid-template-rows: 72px min-content 1fr;
     padding: 0 16px;
+
+    @media screen and (min-width: 576px){
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width:992px) {
+        width: 45%;
+        max-width: 630px;
+        display: block;
+    }
 
     &__title {
         grid-row: 2/3;
@@ -10,6 +20,7 @@
     }
 
     &__form {
+        color: $white;
         grid-row: 3/4;
 
         .payment__fieldset {
@@ -41,6 +52,30 @@
             .payment__select {
                 margin-bottom: 5px;
             }
+        }
+
+        .payment__button-container {
+            text-align: center;
+
+            .payment__button {
+                width: max-content;
+                color: $white;
+                font-size: $text;
+                background-color: $red-logo;
+                margin: 5px 0;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+    
+                &:hover {
+                    background-color: $dark-red;
+                }
+            }
+        }
+
+        .payment__modal {
+            color: $black;
+            text-align: left;
         }
     }
 }

@@ -179,7 +179,8 @@
                 <!-- Información -->
                 <div>
                     <label class="payment__label" for="name">Nombres<span> *</span></label>
-                    <input class="payment__input" type="text" name="name" id="name" placeholder="Escribe tu nombre aquí...">
+                    <input class="payment__input" type="text" name="name" id="name"
+                        placeholder="Escribe tu nombre aquí...">
                 </div>
                 <div>
                     <label class="payment__label" for="lastName">Apellidos<span> *</span></label>
@@ -193,7 +194,8 @@
                 </div>
                 <div>
                     <label class="payment__label" for="telf">Teléfono<span> *</span></label>
-                    <input class="payment__input" type="tel" name="tel" id="tel" placeholder="Escribe tu número aquí...">
+                    <input class="payment__input" type="tel" name="tel" id="tel"
+                        placeholder="Escribe tu número aquí...">
                 </div>
                 <div class="payment__direction">
                     <label class="payment__label" for="address">Dirección<span> *</span></label>
@@ -233,7 +235,8 @@
                 <div>
                     <!-- Información -->
                     <label class="payment__label" for="postalCode">Código postal<span>*</span></label>
-                    <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode" placeholder="Codigo Postal">
+                    <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode"
+                        placeholder="Código Postal">
                 </div>
                 <div class="payment__check">
                     <!-- Confirmación de envío -->
@@ -242,7 +245,7 @@
                 </div>
             </fieldset>
             <!-- Método de pago -->
-            <fieldset class="payment__method">
+            <fieldset class="payment__fieldset">
                 <legend class="payment__legend h5">2. Método de pago</legend>
                 <!-- Información de la tarjeta de crédito -->
                 <div class="payment__card">
@@ -256,20 +259,23 @@
                 </div>
                 <!-- Datos comerciales de la tarjeta de crédito -->
                 <div class="payment__owner-name">
-                    <label for="ownerName">Nombre del propietario<span>*</span></label>
-                    <input type="text" name="ownerName" id="ownerName">
+                    <label class="payment__label" for="ownerName">Nombre del propietario<span> *</span></label>
+                    <input class="payment__input" type="text" name="ownerName" id="ownerName"
+                        placeholder="Escribe su nombre aquí...">
                 </div>
                 <div class="payment__card-number">
-                    <label for="creditNumber">Número de tarjeta<span>*</span></label>
-                    <input type="text" name="creditNumber" id="creditNumber">
+                    <label class="payment__label" for="creditNumber">Número de tarjeta<span> *</span></label>
+                    <input class="payment__input" type="text" name="creditNumber" id="creditNumber"
+                        placeholder="Escribe el número de tarjeta aquí...">
                 </div>
                 <div>
-                    <label for="expDate">Fecha de expiración<span>*</span></label>
+                    <label class="payment__label" for="expDate">Fecha de expiración<span> *</span></label>
                     <input type="date" name="expDate" id="expDate">
                 </div>
                 <div>
-                    <label for="cvv">CVV/CVC<span>*</span></label>
-                    <input type="number" name="cvv" id="cvv">
+                    <label class="payment__label" for="cvv">CVV/CVC<span> *</span></label>
+                    <input class="payment__input payment__input--code" type="number" name="cvv" id="cvv"
+                        placeholder="CVV/CVC">
                 </div>
                 <!-- Información de la tarjeta de débito -->
                 <div class="payment__card">
@@ -283,39 +289,44 @@
                 </div>
                 <!-- Datos comerciales de la tarjeta de débito -->
                 <div class="payment__owner-name">
-                    <label for="ownerName">Nombre del propietario<span>*</span></label>
-                    <input type="text" name="ownerName" id="ownerName">
+                    <label class="payment__label" for="ownerName">Nombre del propietario<span> *</span></label>
+                    <input class="payment__input" type="text" name="ownerName" id="ownerName"
+                        placeholder="Escriba su nombre aquí...">
                 </div>
-                <div class="cardNumber">
-                    <label for="creditNumber">Número de tarjeta<span>*</span></label>
-                    <input type="text" name="creditNumber" id="creditNumber">
+                <div class="payment__card-number">
+                    <label class="payment__label" for="creditNumber">Número de tarjeta<span> *</span></label>
+                    <input class="payment__input" type="text" name="creditNumber" id="creditNumber"
+                        placeholder="Escribe el número de tarjeta aquí...">
                 </div>
                 <div>
-                    <label for="expDate">Fecha de expiración<span>*</span></label>
+                    <label class="payment__label" for="expDate">Fecha de expiración<span> *</span></label>
                     <input type="date" name="expDate" id="expDate">
                 </div>
                 <div>
-                    <label for="cvv">CVV/CVC<span>*</span></label>
-                    <input type="number" name="cvv" id="cvv">
+                    <label class="payment__label" for="cvv">CVV/CVC<span> *</span></label>
+                    <input class="payment__input payment__input--code" type="number" name="cvv" id="cvv"
+                        placeholder="CVV/CVC">
                 </div>
             </fieldset>
             <!-- Envío -->
-            <fieldset class="payment__delivery">
+            <fieldset class="payment__fieldset">
                 <legend class="payment__legend h5">3. Envío</legend>
                 <!-- Información de envío -->
                 <div class="payment__direction">
-                    <label for="addressShip">Dirección de envío<span>*</span></label>
-                    <input type="text" name="addressShip" id="addressShip">
-                    <input type="text" name="addressShipTwo" id="addressShipTwo">
+                    <label class="payment__label" for="addressShip">Dirección de envío<span>*</span></label>
+                    <input class="payment__input" type="text" name="addressShip" id="addressShip"
+                        placeholder="Escribe su dirección aquí...">
+                    <input class="payment__input" type="text" name="addressShipTwo" id="addressShipTwo">
                 </div>
                 <div class="payment__reference">
-                    <label for="reference">Referencia (Opcional)</label>
-                    <input type="text" name="reference" id="reference">
+                    <label class="payment__label" for="reference">Referencia (Opcional)</label>
+                    <input class="payment__input" type="text" name="reference" id="reference"
+                        placeholder="Escribe una referencia aquí...">
                 </div>
                 <div class="payment__country">
                     <!-- Selección de país -->
-                    <label for="countryShip">País<span>*</span></label>
-                    <select name="countryShip" id="countryShip">
+                    <label class="payment__label" for="countryShip">País<span>*</span></label>
+                    <select class="payment__select" name="countryShip" id="countryShip">
                         <option value="default">------</option>
                         <option value="peru">Perú</option>
                         <option value="chile">Chile</option>
@@ -331,8 +342,8 @@
                 </div>
                 <div>
                     <!-- Selección de ciudad -->
-                    <label for="cityShip">Ciudad<span>*</span></label>
-                    <select name="cityShip" id="cityShip">
+                    <label class="payment__label" for="cityShip">Ciudad<span>*</span></label>
+                    <select class="payment__select" name="cityShip" id="cityShip">
                         <option value="default">------</option>
                         <option value="cityOne">Ciudad 1</option>
                         <option value="cityTwo">Ciudad 2</option>
@@ -343,17 +354,18 @@
                 </div>
                 <div>
                     <!-- Información de envío -->
-                    <label for="postalCode">Código postal<span>*</span></label>
-                    <input type="text" name="postalCode" id="postalCode">
+                    <label class="payment__label" for="postalCode">Código postal<span>*</span></label>
+                    <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode"
+                        placeholder="Código Postal">
                 </div>
                 <div>
-                    <label for="shipDate">Fecha de envío<span>*</span></label>
+                    <label class="payment__label" for="shipDate">Fecha de envío<span>*</span></label>
                     <input type="date" name="shipDate" id="shipDate">
                 </div>
                 <div>
                     <!-- Selección de horario -->
-                    <label for="shipSched">Horario de envío<span>*</span></label>
-                    <select name="shipSched" id="shipSched">
+                    <label class="payment__label" for="shipSched">Horario de envío<span>*</span></label>
+                    <select class="payment__select" name="shipSched" id="shipSched">
                         <option value="default">------</option>
                         <option value="rangeOne">Rango 1</option>
                         <option value="rangeTwo">Rango 2</option>
@@ -364,7 +376,7 @@
                 </div>
             </fieldset>
             <!-- Botón de pago -->
-            <div id="payButtonCont">
+            <div class="payment__button-container">
                 <button class="payment__button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Pagar
                 </button>
@@ -378,7 +390,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body payment__modal">
                                 ¡Gracias por confiar en nosotros! Le estaremos informando a través del correo
                                 electrónico cuando su pedido se encuentre en camino.
                             </div>
