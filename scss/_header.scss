@@ -2,11 +2,16 @@
 .header {
     width: 100%;
     position: absolute;
-    z-index: 1000;
+    z-index: 55;
 
     &__nav {
         position: relative;
         padding: 0;
+        background-color: inherit;
+
+        @media screen and (min-width:992px) {
+            position: absolute;
+        }
 
         .header__logo--pages {
             margin: 11px 0;
@@ -18,9 +23,9 @@
 
         .header__button-nav {
             position: absolute;
+            background-color: transparent;
             top: 0;
             border: none;
-            background-color: transparent;
             margin: 20px 16px;
             @include sizes (32px, 32px)
         }
@@ -53,6 +58,7 @@
     
                 .header__submenu {
                     background-color: $black;
+                    width: 100%;
         
                     .header__sublink {
                         color: $white;

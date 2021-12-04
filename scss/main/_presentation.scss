@@ -8,6 +8,7 @@
 
     &__video-desktop {
         display: none;
+        z-index: 53;
 
         @media screen and (min-width: 768px) {
             display: inline-block;
@@ -33,7 +34,7 @@
     
         .presentation__img {
             position: relative;
-            z-index: 100;
+            z-index: 54;
             width: 250px;
 
             @media screen and (min-width: 768px) {
