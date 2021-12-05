@@ -85,14 +85,20 @@
         }
 
         &-body {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 1fr;
-            justify-items: center;
-            align-content: center;
-            gap: 16px;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width:768px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr 1fr;
+                justify-items: center;
+                align-content: center;
+                gap: 16px;
+            }
 
             .album__link {
+                margin: 8px 0;
 
                 .album__icon {
                     height: 25px;
