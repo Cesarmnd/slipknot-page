@@ -291,14 +291,20 @@ body {
         border-radius: 5px; }
         .album__discography .album__disc .album__button:hover {
           background-color: #500; }
-      .album__discography .album__disc .album__icon {
-        width: 30px;
-        height: 30px; }
   .album__modal {
     background-color: #000;
     border: 1px solid #FF0001; }
     .album__modal-header {
       border-bottom: 1px solid #FF0001; }
+    .album__modal-body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+      align-content: center;
+      gap: 16px; }
+      .album__modal-body .album__link .album__icon {
+        height: 25px; }
 
 /* Sección Eventos */
 .events {

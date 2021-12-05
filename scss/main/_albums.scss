@@ -30,63 +30,74 @@
         }
         
         .album__disc {
-                display: flex;
-                align-items: center;
-                margin: 10px 0;
-                cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+    
+            @media screen and (min-width:576px) {
+                flex-direction: column;
+                width: min-content;
+            }
+
+            &:hover {
+                color: $red-logo;
+                text-shadow: 0px 0px 10px $red-logo;
+            }
+    
+            .album__image {
+                @include sizes(170px,170px);
     
                 @media screen and (min-width:576px) {
-                    flex-direction: column;
-                    width: min-content;
+                    margin: 10px 0;
+                    @include sizes (200px, 200px);
                 }
+            }
 
-                &:hover {
-                    color: $red-logo;
-                    text-shadow: 0px 0px 10px $red-logo;
-                }
-    
-                .album__image {
-                    @include sizes(170px,170px);
-    
-                    @media screen and (min-width:576px) {
-                        margin: 10px 0;
-                        @include sizes (200px, 200px);
-                    }
-                }
+            .album__name {
+                width: 100%;
+                text-align: center;
+            }
 
-                .album__name {
-                    width: 100%;
-                    text-align: center;
-                }
-
-                .album__button {
-                    width: max-content;
-                    color: $white;
-                    font-size: $text;
-                    background-color: $red-logo;
-                    margin: 5px 0;
-                    padding: 5px 10px;
-                    border: none;
-                    border-radius: 5px;
+            .album__button {
+                width: max-content;
+                color: $white;
+                font-size: $text;
+                background-color: $red-logo;
+                margin: 5px 0;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
         
-                    &:hover {
-                        background-color: $dark-red;
-                    }
+                &:hover {
+                    background-color: $dark-red;
                 }
-
-                .album__icon {
-                    width: 30px;
-                    height: 30px;
-                }
-        }
-        }
-    
-        &__modal {
-            background-color: $black;
-            border: 1px solid $red-logo;
-
-            &-header {
-                border-bottom: 1px solid $red-logo;
             }
         }
+    }
+    
+    &__modal {
+        background-color: $black;
+        border: 1px solid $red-logo;
+
+        &-header {
+            border-bottom: 1px solid $red-logo;
+        }
+
+        &-body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            align-content: center;
+            gap: 16px;
+
+            .album__link {
+
+                .album__icon {
+                    height: 25px;
+                }
+            }
+        }
+    }
 }
