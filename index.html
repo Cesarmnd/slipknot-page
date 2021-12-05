@@ -17,6 +17,9 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Mis Estilos -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -303,76 +306,94 @@
         <section class="album mt-3 mt-md-4 my-lg-5" id="albums">
             <h2 class="album__title display-4 pt-lg-5">Álbumes</h2>
             <div class="album__discography">
-                
-                    <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <img class="album__image" src="images/albums/slipknot.jpg" alt="slipknot" title="Slipknot">
-                        <p class="album__name">Slipknot</p>
-                        <div class="album__logos">
-                            <i class="fab fa-spotify"></i>
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#slipknot">
+                    <img class="album__image" src="images/albums/slipknot.jpg" alt="slipknot" title="Slipknot">
+                    <p class="album__name">Slipknot</p>
+                </div>
+
+
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/iowa.jpg" alt="iowa" title="Iowa">
+                    <p class="album__name">Iowa</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/subliminal-verses.jpg" alt="the_subliminal _verses"
+                        title="The Subliminal Verses">
+                    <p class="album__name">Vol. 3: The Subliminal Verses</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/9_0_live.jpg" alt="9_0_live" title="9.0 Live">
+                    <p class="album__name">9.0: Live</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/all_hope_is_gone.jpg" alt="all_hope_is_gone"
+                        title="All hope is gone">
+                    <p class="album__name">All hope is gone</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/the_gray_chapter.jpg" alt="the_gray_chapter"
+                        title="The Gray Chapter">
+                    <p class="album__name">.5 The Gray Chapter</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/day_of_the_gusano.jpg" alt="day_of_the_gusano"
+                        title="Day of the Gusano">
+                    <p class="album__name">Day of the Gusano</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+                <div class="album__disc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="album__image" src="images/albums/we_are_not_your_kind.jpg" alt="we_are_not_your_kind"
+                        title="We Are Not Your Kind">
+                    <p class="album__name">We Are Not Your Kind</p>
+                    <div class="album__logo">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="slipknot" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="album__modal modal-content">
+                        <div class="album__modal-header modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Escoja la plataforma:</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="album__icon" src="images/icons/spotify.svg" alt="Spotify">
+                            <img class="album__icon" src="images/icons/tidal.svg" alt="Tidal">
+                            <img class="album__icon" src="images/icons/youtube.svg" alt="Youtube Music">
+                            <img class="album__icon" src="images/icons/deezer.svg" alt="Deezer">
+                            <img class="album__icon" src="images/icons/apple.svg" alt="Apple Music">
                         </div>
                     </div>
-                    
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/iowa.jpg" alt="iowa" title="Iowa">
-                        <p class="album__name">Iowa</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/subliminal-verses.jpg" alt="the_subliminal _verses"
-                            title="The Subliminal Verses">
-                        <p class="album__name">Vol. 3: The Subliminal Verses</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/9_0_live.jpg" alt="9_0_live" title="9.0 Live">
-                        <p class="album__name">9.0: Live</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/all_hope_is_gone.jpg" alt="all_hope_is_gone"
-                            title="All hope is gone">
-                        <p class="album__name">All hope is gone</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/the_gray_chapter.jpg" alt="the_gray_chapter"
-                            title="The Gray Chapter">
-                        <p class="album__name">.5 The Gray Chapter</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/day_of_the_gusano.jpg" alt="day_of_the_gusano"
-                            title="Day of the Gusano">
-                        <p class="album__name">Day of the Gusano</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
-                    <div class="album__disc">
-                        <img class="album__image" src="images/albums/we_are_not_your_kind.jpg"
-                            alt="we_are_not_your_kind" title="We Are Not Your Kind">
-                        <p class="album__name">We Are Not Your Kind</p>
-                        <div class="album__logo">
-
-                        </div>
-                    </div>
-
+                </div>
             </div>
         </section>
         <!-- Sección "Eventos" -->

@@ -33,6 +33,7 @@
                 display: flex;
                 align-items: center;
                 margin: 10px 0;
+                cursor: pointer;
     
                 @media screen and (min-width:576px) {
                     flex-direction: column;
@@ -58,10 +59,34 @@
                     text-align: center;
                 }
 
+                .album__button {
+                    width: max-content;
+                    color: $white;
+                    font-size: $text;
+                    background-color: $red-logo;
+                    margin: 5px 0;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 5px;
+        
+                    &:hover {
+                        background-color: $dark-red;
+                    }
+                }
+
                 .album__icon {
-                    width: 25px;
-                    height: 25px;
+                    width: 30px;
+                    height: 30px;
                 }
         }
+        }
+    
+        &__modal {
+            background-color: $black;
+            border: 1px solid $red-logo;
+
+            &-header {
+                border-bottom: 1px solid $red-logo;
+            }
         }
 }
