@@ -272,7 +272,8 @@ body {
         text-shadow: 0px 0px 10px #FF0001; }
       .album__discography .album__disc .album__image {
         width: 100%;
-        max-width: 290px; }
+        max-width: 240px;
+        margin-bottom: 10px; }
         @media screen and (min-width: 576px) {
           .album__discography .album__disc .album__image {
             margin: 10px 0;

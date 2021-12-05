@@ -48,7 +48,8 @@
     
             .album__image {
                 width: 100%;
-                max-width: 290px;
+                max-width: 240px;
+                margin-bottom: 10px;
     
                 @media screen and (min-width:576px) {
                     margin: 10px 0;
