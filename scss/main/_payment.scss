@@ -9,12 +9,13 @@
     }
 
     @media screen and (min-width:992px) {
+        grid-template-rows: 68px 1fr;
         width: 45%;
         max-width: 630px;
-        display: block;
     }
 
     &__title {
+        text-align: center;
         grid-row: 2/3;
         color: $red-logo;
     }

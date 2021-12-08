@@ -131,6 +131,9 @@ body {
             .header__nav .header__desktop .header__menu .header__element .header__submenu {
               background-color: transparent;
               border: none; }
+              .header__nav .header__desktop .header__menu .header__element .header__submenu--solid {
+                background-color: #000;
+                border-radius: 0; }
               .header__nav .header__desktop .header__menu .header__element .header__submenu .header__sublink {
                 color: #fafafa; }
                 .header__nav .header__desktop .header__menu .header__element .header__submenu .header__sublink:hover {
@@ -618,10 +621,11 @@ body {
       margin: 0 auto; } }
   @media screen and (min-width: 992px) {
     .payment {
+      grid-template-rows: 68px 1fr;
       width: 45%;
-      max-width: 630px;
-      display: block; } }
+      max-width: 630px; } }
   .payment__title {
+    text-align: center;
     grid-row: 2/3;
     color: #FF0001; }
   .payment__form {

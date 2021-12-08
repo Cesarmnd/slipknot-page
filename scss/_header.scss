@@ -162,6 +162,11 @@
                             background-color: transparent;
                             border: none;
 
+                            &--solid {
+                                background-color: $black;
+                                border-radius: 0;
+                            }
+
                             .header__sublink {
                                 color: $white;
 
