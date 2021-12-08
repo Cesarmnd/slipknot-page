@@ -110,6 +110,21 @@
             display: flex;
             margin: 15px 0;
             justify-content: space-between;
+
+            .contact__btn {
+                width: max-content;
+                color: $white;
+                font-size: $text;
+                background-color: $red-logo;
+                margin: 5px 0;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+    
+                &:hover {
+                    background-color: $dark-red;
+                }
+            }
         }
     }
 }
