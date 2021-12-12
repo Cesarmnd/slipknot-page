@@ -44,14 +44,11 @@
         }
     }
 
-    &__indicator {
-        margin-bottom: 0;
 
-        &-element {
-            margin-bottom: 10;
-            width: 20px;
-            background-color: $red-logo;
-        }
+    &__indicator {
+        margin-bottom: 10;
+        width: 20px;
+        background-color: $red-logo;
     }
 
     &__caption {
