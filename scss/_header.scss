@@ -4,188 +4,148 @@
     position: absolute;
     z-index: 55;
 
+    @media screen and (min-width: 992px) {
+        display: flex;
+        position: relative;
+        @include sizes (100%, auto);
+    }
+
     &__nav {
         position: relative;
         padding: 0;
         background-color: inherit;
 
         @media screen and (min-width:992px) {
+            width: 100%;
             position: absolute;
         }
+    }
 
-        .header__logo--pages {
+    &__button-nav {
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        border: none;
+        margin: 20px 16px;
+        @include sizes (32px, 32px);
+
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__button-close {
+        border: none;
+        background-color: transparent;
+        @include sizes (32px, 32px)
+    }
+
+    &__offcanvas {
+        position: absolute;
+        background-color: $black;
+        color: $white;
+        @include sizes (100%, 100vh);
+
+        @media screen and (min-width: 576px) {
+            @include sizes (65%, 100vh);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include sizes (50%, 100vh);
+        }
+
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+
+        &-elements {
+            color: $white;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-size: $nav;
+        text-decoration: none;
+
+        &:hover {
+            color: $red-logo;
+            text-shadow: 0px 0px 10px $red-logo;
+        }
+    }
+
+    &__submenu {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+
+        &--solid {
+            background-color: $black;
+            border-radius: 0;
+        }
+    }
+
+    &__sublink {
+        color: $white;
+        font-size: $text;
+
+        &:hover {
+            background-color: transparent;
+            color: $red-logo;
+            text-shadow: 0px 0px 10px $red-logo;
+        }
+    }
+
+    &__star {
+        @include sizes (80px, 80px);
+
+        &--mobile {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        @media screen and (min-width:768px) {
+            margin: 8px;
+            @include sizes (50px, 50px)
+        }
+    }
+
+    &__desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        padding: 8px;
+
+        &--pages {
             margin: 11px 0;
             position: absolute;
             top: 0;
             left: 50%;
             transform: translate(-50%);
-        }
-
-        .header__button-nav {
-            position: absolute;
-            background-color: transparent;
-            top: 0;
-            border: none;
-            margin: 20px 16px;
-            @include sizes (32px, 32px)
-        }
-
-        .header__offcanvas {
-            position: absolute;
-            background-color: $black;
-            color: $white;
-            @include sizes (100%, 100vh);
-
-            .header__button-close {
-                border: none;
-                background-color: transparent;
-                @include sizes (32px, 32px)
-            }
-
-            .header__offcanvas-elements {
-                color: $white;
-
-                .header__link {
-                    color: $white;
-                    font-size: $nav;
-                    text-decoration: none;
         
-                    &:hover {
-                        color: $red-logo;
-                        text-shadow: 0px 0px 10px $red-logo;
-                    }
-                }
-    
-                .header__submenu {
-                    background-color: $black;
-                    width: 100%;
-        
-                    .header__sublink {
-                        color: $white;
-                        font-size: $text;
-        
-                        &:hover {
-                            background-color: transparent;
-                            color: $red-logo;
-                            text-shadow: 0px 0px 10px $red-logo;
-                        }
-                    }
-                }
-            }    
-        }
-        
-        .header__star {
-            @include sizes (80px, 80px);
-
-            &--mobile {
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translate(-50%);
-            }
-        }
-
-        .header__desktop {
-            display: none;
-        }
-    }     
-}
-
-@media screen and (min-width: 576px) {
-    .header {
-        .header__offcanvas {
-            @include sizes (65%, 100vh)
-        }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .header {
-        .header__offcanvas {
-            @include sizes (50%, 100vh)
-        }
-    }
-}
-
-@media screen and (min-width: 992px) {
-
-    .header{
-        display: flex;
-        position: relative;
-        @include sizes (100%, auto);
-
-        &__button-nav {
-            display: none;
-        }
-
-        &__offcanvas {
-            display: none;
-        }
-
-        &__nav {
-            width: 100%;
-
-            .header__logo--pages {
+            @media screen and (min-width: 992px) {
                 display: none;
             }
-
-            .header__desktop {
-                display: flex;
-                align-items: center;
-                width: 100%;
-
-                .header__logo {
-                    padding: 8px;
-                }
-
-                .header__menu {
-                    flex-direction: row;
-                    width: 100%;
-
-                    .header__element {
-                        flex: auto;
-                        text-align: center;
-                        position: relative;
-
-                        .header__link {
-                            color: $white;
-                            font-size: $text;
-                            text-decoration: none;
-    
-                            &:hover {
-                                color: $red-logo;
-                                text-shadow: 0px 0px 10px $red-logo;
-                            }
-                        }
-
-                        .header__submenu {
-                            background-color: transparent;
-                            border: none;
-
-                            &--solid {
-                                background-color: $black;
-                                border-radius: 0;
-                            }
-
-                            .header__sublink {
-                                color: $white;
-
-                                &:hover {
-                                    background-color: $red-logo;
-                                    color: $black;
-                                    text-shadow: 0px 0px 10px $red-logo;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .header__star {
-                    margin: 8px;
-                    @include sizes (50px, 50px)
-                }
-            }
         }
     }
-    
+
+    &__menu {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__element {
+        flex: auto;
+        text-align: center;
+        position: relative;
+    }
 }
