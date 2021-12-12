@@ -28,59 +28,59 @@
         @media screen and (min-width: 1200px) {
             grid-template-columns: repeat(4, 1fr);
         }
-        
-        .album__disc {
-            display: flex;
+    }
+
+    &__disc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+        cursor: pointer;
+
+        @media screen and (min-width:576px) {
             flex-direction: column;
-            align-items: center;
+            width: min-content;
+        }
+
+        &:hover {
+            color: $red-logo;
+            text-shadow: 0px 0px 10px $red-logo;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 240px;
+        margin-bottom: 10px;
+
+        @media screen and (min-width:576px) {
             margin: 10px 0;
-            cursor: pointer;
-    
-            @media screen and (min-width:576px) {
-                flex-direction: column;
-                width: min-content;
-            }
+            @include sizes (200px, 200px);
+        }
+    }
 
-            &:hover {
-                color: $red-logo;
-                text-shadow: 0px 0px 10px $red-logo;
-            }
-    
-            .album__image {
-                width: 100%;
-                max-width: 240px;
-                margin-bottom: 10px;
-    
-                @media screen and (min-width:576px) {
-                    margin: 10px 0;
-                    @include sizes (200px, 200px);
-                }
-            }
+    &__name {
+        width: 100%;
+        text-align: center;
+        font-size: $name;
 
-            .album__name {
-                width: 100%;
-                text-align: center;
-                font-size: $name;
+        @media screen and (min-width:768px){
+            font-size: $text;
+        }
+    }
 
-                @media screen and (min-width:768px){
-                    font-size: $text;
-                }
-            }
+    &__button {
+        width: max-content;
+        color: $white;
+        font-size: $text;
+        background-color: $red-logo;
+        margin: 5px 0;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
 
-            .album__button {
-                width: max-content;
-                color: $white;
-                font-size: $text;
-                background-color: $red-logo;
-                margin: 5px 0;
-                padding: 5px 10px;
-                border: none;
-                border-radius: 5px;
-        
-                &:hover {
-                    background-color: $dark-red;
-                }
-            }
+        &:hover {
+            background-color: $dark-red;
         }
     }
     
@@ -104,14 +104,14 @@
                 align-content: center;
                 gap: 16px;
             }
-
-            .album__link {
-                margin: 8px 0;
-
-                .album__icon {
-                    height: 25px;
-                }
-            }
         }
+    }
+
+    &__link {
+        margin: 8px 0;
+    }
+
+    &__icon {
+        height: 25px;
     }
 }

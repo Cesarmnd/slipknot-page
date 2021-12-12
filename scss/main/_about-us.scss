@@ -42,21 +42,22 @@
         &-img {
             max-width: 380px;
         }
-        .about-us__indicator-container {
-            margin-bottom: 0;
+    }
 
-            .about-us__indicator {
-                margin-bottom: 10;
-                width: 20px;
-                background-color: $red-logo;
-            }
-        }
+    &__indicator {
+        margin-bottom: 0;
 
-        .about-us__caption {
-            padding: 10px;
-            background-color: $transparent-black;
-            border-radius: 10px;
+        &-element {
+            margin-bottom: 10;
+            width: 20px;
+            background-color: $red-logo;
         }
+    }
+
+    &__caption {
+        padding: 10px;
+        background-color: $transparent-black;
+        border-radius: 10px;
     }
 
     &__text {
@@ -64,5 +65,4 @@
         text-align: left;
         align-self: center;
     }
-
 }

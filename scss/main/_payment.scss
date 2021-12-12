@@ -23,60 +23,62 @@
     &__form {
         color: $white;
         grid-row: 3/4;
+    }
 
-        .payment__fieldset {
-            border-top: 1px solid $white;
-            margin-bottom: 30px;
+    &__fieldset {
+        border-top: 1px solid $white;
+        margin-bottom: 30px;
+    }
 
-            .payment__legend {
-                padding-right: 5px;
-                margin: 10px 0;
-                float: none;
-                width: auto;
-            }
+    &__legend {
+        padding-right: 5px;
+        margin: 10px 0;
+        float: none;
+        width: auto;
+    }
 
-            .payment__label {
-                display: block;
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
+    &__label {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
-            .payment__input {
-                width: 100%;
-                margin-bottom: 5px;
+    &__input {
+        width: 100%;
+        margin-bottom: 5px;
 
-                &--code {
-                    width: 40%;
-                }
-            }
-
-            .payment__select {
-                margin-bottom: 5px;
-            }
+        &--code {
+            width: 40%;
         }
+    }
 
-        .payment__button-container {
-            text-align: center;
+    &__select {
+        margin-bottom: 5px;
+    }
 
-            .payment__button {
-                width: max-content;
-                color: $white;
-                font-size: $text;
-                background-color: $red-logo;
-                margin: 5px 0;
-                padding: 5px 10px;
-                border: none;
-                border-radius: 5px;
+    &__button {
+        text-align: center;
+
+        &-element {
+            width: max-content;
+            color: $white;
+            font-size: $text;
+            background-color: $red-logo;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
     
-                &:hover {
-                    background-color: $dark-red;
-                }
+            &:hover {
+                background-color: $dark-red;
             }
         }
+    }
 
-        .payment__modal {
-            color: $black;
-            text-align: left;
-        }
+    
+
+    &__modal {
+        color: $black;
+        text-align: left;
     }
 }

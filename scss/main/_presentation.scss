@@ -31,25 +31,25 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-    
-        .presentation__img {
-            position: relative;
-            z-index: 54;
-            width: 250px;
+    }
 
-            @media screen and (min-width: 768px) {
-            width: 450px;
-            }
-        }
+    &__img {
+        position: relative;
+        z-index: 54;
+        width: 250px;
 
-        .presentation__star {
-            position: absolute;
-            width: 250px;
-            animation-name: spinning;
-            animation-iteration-count: infinite;
-            animation-duration: 3s;
-            animation-timing-function: linear;
+        @media screen and (min-width: 768px) {
+        width: 450px;
         }
+    }
+
+    &__star {
+        position: absolute;
+        width: 250px;
+        animation-name: spinning;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function: linear;
     }
 }
 
