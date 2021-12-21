@@ -14,10 +14,40 @@
         max-width: 630px;
     }
 
-    &__title {
-        text-align: center;
+    &__banner {
         grid-row: 2/3;
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-size: $title;
         color: $red-logo;
+        text-align: center;
+    }
+
+    &__cart {
+        padding: 0 16px;
+        font-size: 20px;
+
+        @media screen and (min-width:768px) {
+            position: absolute;
+            right: 0;
+        }
+
+        &-link {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $red-logo;
+                text-shadow: 0 0 10px $red-logo;
+            }
+        }
     }
 
     &__form {
@@ -55,30 +85,42 @@
     &__select {
         margin-bottom: 5px;
     }
-
-    &__button {
-        text-align: center;
-
-        &-element {
-            width: max-content;
-            color: $white;
-            font-size: $text;
-            background-color: $red-logo;
-            margin: 5px 0;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
     
-            &:hover {
-                background-color: $dark-red;
-            }
+    &__card {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &-label {
+            margin-left: 10px;
         }
     }
 
-    
+    &__icons {
+        position: absolute;
+        right: 0;
+    }
+
+    &__button {
+        text-align: center
+    }
+
+    &__button-element {
+        @include btn();
+    }
 
     &__modal {
-        color: $black;
+        color: $white;
+        background-color: $black;
         text-align: left;
+        border: 1px solid $red-logo;
+
+        &-header {
+            border-bottom: 1px solid $red-logo;
+        }
+
+        &-footer {
+            border-top: 1px solid $red-logo;
+        }
     }
 }

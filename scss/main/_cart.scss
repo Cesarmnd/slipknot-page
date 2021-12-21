@@ -1,78 +1,164 @@
-.cart {
+.carts {
     display: grid;
     grid-template-rows: 72px min-content 1fr;
-    padding: 0 16px;
 
-    @media screen and (min-width:576px) {
-        width: 80%;
-        margin: 0 auto;
-    }
+    &__banner {
+        grid-row: 2/3;
 
-    @media screen and (min-width:992px) {
-        width: 60%;
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__title {
-        text-align: center;
+        font-size: $title;
         color: $red-logo;
-        grid-row: 2/3;
-    }
-
-    &__product {
-        grid-row: 3/4;
         text-align: center;
     }
 
-    &__img {
-        width: 100%;
-        max-width: 650px;
-    }
+    &__cart {
+        padding: 0 16px;
+        font-size: 20px;
 
-    &__container {
-        color: $white;
-    }
+        @media screen and (min-width:768px) {
+            position: absolute;
+            right: 0;
+        }
 
-    &__quantity {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    &__subtitle {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    &__button-quantity {
-        margin: 0 8px;
-        width: 25px;
-        height: 25px;
-    }
-
-    &__payment-container {
-        grid-row: 4/5;
-        color: $white;
-        text-align: center;
-    }
-
-    &__button {
-        text-align: center;
-
-        &-element {
-            width: max-content;
+        &-link {
             color: $white;
-            font-size: $text;
-            background-color: $red-logo;
-            margin: 5px 0;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
+            text-decoration: none;
 
             &:hover {
-                background-color: $dark-red;
+                color: $red-logo;
+                text-shadow: 0 0 10px $red-logo;
             }
         }
     }
+
+    &__products-container {
+        grid-row: 3/4;
+        position: relative;
+        color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 100px;
+        max-width: 950px;
+        justify-content: space-around;
+        margin: 0 16px;
+        margin-top: 50px;
+
+        @media screen and (min-width: 992px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__product-header {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            width: 100%;
+            max-width: 950px;
+            justify-content: flex-start;
+            border-bottom: 4px solid $white;
+            margin: 0 auto;
+        }
+    }
+
+    &__product-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            width: 45%;
+        }
+    }
+
+    &__price {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            width: 15%;
+        }
+    }
+
+    &__quantity {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            width: 30%;
+        }
+
+        &--valor {
+            justify-content: center;
+        }
+    }
+
+    &__total {
+        display: none;
+        
+        @media screen and (min-width: 768px) {
+            width: 10%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__products {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    &__product {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid $white;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    &__img {
+        width: 150px;
+    }
+
+    &__total-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+    }
+
+    &__total-title {
+        padding-right: 10px;
+    }
+
+    &__button {
+        position: absolute;
+        text-decoration: none;
+        bottom: 0;
+        right: 0;
+        @include btn();
+    }
+
 }

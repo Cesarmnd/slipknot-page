@@ -20,6 +20,7 @@
 
     &__cart {
         padding: 0 16px;
+        font-size: 20px;
 
         @media screen and (min-width:768px) {
             position: absolute;
@@ -51,10 +52,6 @@
         color: $white;
         font-size: $subtitle;
         margin: 20px 0;
-
-        @media screen and (min-width:768px) {
-            text-align: left;
-        }
     }
 
     &__gallery {
@@ -78,26 +75,56 @@
     }
 
     &__item-container {
-        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 20px 0;
-    }
 
-    &__link {
-        text-decoration: none;
-        color: $white;
-
-        &:hover {
-            color: $red-logo;
-            text-shadow: 0 0 10px $red-logo;
-            filter: brightness(150%);
+        &:hover  .store__filter  {
+            display: block;
         }
-    }    
+
+        &:hover .store__btn {
+            display: block;
+        }
+    }
 
     &__name {
         font-size: $name;
+        color: $white;
     }
 
     &__price {
         color: $white;
+    }
+
+    &__btn {
+        display: none;
+        position: absolute;
+        @include btn();
+        z-index: 600;
+    }
+
+    &__product-container {
+        max-width: none;
+    }
+
+    &__toast {
+        background-color: $black;
+        color: $white;
+        border: 1px solid $red-logo;
+        position: relative;
+        z-index: 2000;
+
+        &-header {
+            background-color: $black;
+            color: $white;
+        }
+
+        &-body{
+            border-top: 1px solid $red-logo;
+        }
     }
 }

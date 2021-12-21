@@ -29,7 +29,7 @@
         margin: 20px 16px;
         @include sizes (32px, 32px);
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width:992px) {
             display: none;
         }
     }
@@ -50,11 +50,7 @@
             @include sizes (65%, 100vh);
         }
 
-        @media screen and (min-width: 768px) {
-            @include sizes (50%, 100vh);
-        }
-
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width:992px) {
             display: none;
         }
 
@@ -115,7 +111,7 @@
     &__desktop {
         display: none;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 992px) {
             display: flex;
             align-items: center;
             width: 100%;
@@ -139,8 +135,12 @@
     }
 
     &__menu {
-        flex-direction: row;
-        width: 100%;
+
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+            width: 100%;
+        }
+
     }
 
     &__element {

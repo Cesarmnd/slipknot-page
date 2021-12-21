@@ -170,43 +170,30 @@
         </nav>
     </header>
     <!-- Main -->
-    <main class="cart">
+    <main class="carts">
         <!-- "Botón" para regresar a la parte superior de la página -->
         <div class="button-top">
             <a href="#header">
-                <img src="images/icons/arrow-144-32.png" alt="toparrow" title="Volver arriba">
+                <img src="../images/icons/arrow-144-32.png" alt="toparrow" title="Volver arriba">
             </a>
         </div>
-        <h1 class="cart__title display-2">Mi carrito</h1>
-        <!-- Sección donde se añadirán los productos -->
-        <div class="cart__product">
-            <!-- Imagen del Producto -->
-            <img class="cart__img" src="../images/referencia.jpg" alt="imgProduct">
-            <div class="cart__container">
-                <h2 class="cart__name">Nombre del producto</h2>
-                <!-- Cantidad -->
-                <div class="cart__quantity">
-                    <h3 class="cart__subtitle">Cantidad:</h3>
-                    <input class="cart__button-quantity" type="button" name="remove" id="remove" value="-">
-                    <p>0</p>
-                    <input class="cart__button-quantity" type="button" name="add" id="add" value="+">
-                </div>
-                <!-- Precio según la cantidad -->
-                <div class="cart__price">
-                    <p>Total: USD 00.00</p>
-                </div>
+        <section class="carts__banner">
+            <h1 class="carts__title">Carrito</h1>
+            <!-- Link para ir al carrito de compras -->
+            <div class="carts__cart cart">
+                <a class="carts__cart-link" href="cart.html"><ion-icon name="cart-outline"></ion-icon> Carrito de compras (<span>0</span>)</a>
             </div>
-        </div>
-        <div class="cart__payment-container">
-            <!-- Monto total -->
-            <div class="cart__ammount">
-                <p>Total a pagar: USD 00.00</p>
+        </section>
+
+        <div class="carts__products-container products-container">
+            <div class="carts__product-header product-header">
+                <h2 class="carts__product-title product-title">Product</h2>
+                <h3 class="carts__price price" >Price</h3>
+                <h3 class="carts__quantity quantity">Quantity</h3>
+                <h3 class="carts__total total">Total</h3>
             </div>
-            <!-- Botón para ir al proceso de pago -->
-            <div class="cart__button">
-                <a href="pago.html">
-                    <input class="cart__button-element" type="button" name="checkout" id="checkout" value="Pagar">
-                </a>
+            <div class="carts__products products">
+
             </div>
         </div>
     </main>
@@ -237,33 +224,13 @@
                     target="_blank">Youtube</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.reddit.com/r/Slipknot/"
-                    target="_blank">Reddit</a>
+                <a class="nav-link px-2 text-muted" href="https://www.reddit.com/r/Slipknot/" target="_blank">Reddit</a>
             </li>
         </ul>
-        <!-- Íconos -->
-        <div class="footer__icons-container" id="footerIcons">
-            <a class="footer__link" href="https://www.facebook.com/slipknot" target="_blank">
-                <img src="images/icons/facebook-3-32.png" alt="facebook">
-            </a>
-            <a class="footer__link" href="https://www.instagram.com/slipknot/" target="_blank">
-                <img src="images/icons/instagram-32.png" alt="instagram">
-            </a>
-            <a class="footer__link"
-                href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                target="_blank">
-                <img src="images/icons/twitter-32.png" alt="twitter">
-            </a>
-            <a class="footer__link" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ" target="_blank">
-                <img src="images/icons/youtube-32.png" alt="youtube">
-            </a>
-            <a class="footer__link" href="https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8" target="_blank">
-                <img src="images/icons/spotify-32.png" alt="spotify">
-            </a>
-        </div>
         <!-- Copyright -->
         <p class="footer__copyright text-center text-muted">© 2021 Slipknot, Inc</p>
     </footer>
+
     <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
@@ -272,8 +239,14 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
 
+    <!-- Scripts de íconos -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+
     <!-- Mis Scripts -->
     <script src="../scripts/code.js"></script>
-</body>
 
+</body>
 </html>

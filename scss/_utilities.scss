@@ -1,7 +1,38 @@
-// Tamaños
+// Mixins
+// Dimensiones
 @mixin sizes ($width, $height) {
     width: $width;
     height: $height;
+}
+// Botones
+@mixin btn ($color: $white) {
+        width: max-content;
+        color: $color;
+        font-size: $text;
+        background-color: $red-logo;
+        margin: 5px 0;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+
+        &:hover {
+            color: $white;
+            background-color: $black;
+        }
+
+        &:active {
+            color: $white;
+            background-color: $black;
+            outline: none;
+            border: none;
+        }
+
+        &:focus {
+            color: $white;
+            background-color: $black;
+            outline: none;
+            border: none;
+        }
 }
 
 // Fieldset
@@ -21,5 +52,18 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+// Botón de retorno a Top
+
+.button-top {
+    display: none;
+    
+    @media screen and (min-width:768px) {
+        display: inline-block;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
     }
 }
