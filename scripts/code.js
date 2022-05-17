@@ -88,5 +88,3 @@ miscelanea.forEach( obj => {
                     value="Agregar al carrito"></input>`;
   miscContainer.appendChild(item);
 });
-
-let carritos = []
