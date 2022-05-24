@@ -39,8 +39,8 @@ let products = [
 ];
 
 // Creación de arrays
-let cart = [];
 let lista = [];
+let cart =[];
 
 // Selección de contenedores
 const masksContainer = document.querySelector('.mask');
@@ -51,24 +51,22 @@ const miscContainer = document.querySelector('.misc');
 
 // Función para añadir al carrito
 function addCart(e) {
-  let itemId = e.target.id
+  let itemId = e.target.id;
   let foundItem = cart.find(item => item.id === products[itemId].id);
 
   // Evitar items repetidos
-  if (!foundItem && products[itemId].stock > 0) {
-    products[itemId].ammount = 1;
-    products[itemId].stock = products[itemId].stock - 1;
-    cart.push(products[itemId]);
-    alert('Su producto fue añadido')
+  (!foundItem && products[itemId].stock > 0) ? 
+      ( products[itemId].ammount = 1,
+        products[itemId].stock--,
+        cart.push(products[itemId]),
+        alert('Su producto fue añadido') )
+    
+  : (foundItem && products[itemId].stock > 0) ?
+      ( products[itemId].ammount++,
+        products[itemId].stock--,
+        alert('Su producto fue añadido') )
 
-  } else if (foundItem && products[itemId].stock > 0) {
-    products[itemId].ammount++;
-    products[itemId].stock = products[itemId].stock - 1;
-    alert('Su producto fue añadido')
-
-  } else {
-    alert('No hay stock disponible');
-  };
+  : alert('No hay stock disponible');
 
   // Añadido al local Storage
   let carritoJson = JSON.stringify(cart);
@@ -81,9 +79,11 @@ cartBtn.addEventListener('click', showCart)
 
 // Función para mostrar productos
 function showCart () {
+  (cart.length === 0) && alert('Aún no tiene items en su carrito');
+  lista = [];
   let newCart = JSON.parse(localStorage.getItem('carrito'));
   newCart.forEach(( object) => 
-    lista.push(`Nombre: ${object.nombre} => Precio: ${object.precio} => Cantidad: ${object.ammount}
+    lista.push(`Nombre: ${object.nombre} => Precio: ${object.precio} => Cantidad: ${object.ammount};
 `));
 
 // Muestreo temporal de productos
@@ -91,31 +91,32 @@ function showCart () {
 ${lista.join('')}`);
 }
 
-// Renderizado de productos
-products.forEach( obj => {
-  const item = document.createElement('div');
-  item.className = 'store__item-container';
-  item.innerHTML = `<h3 class="store__name">${obj.nombre}</h3>
-                    <img src=${obj.img}>
-                    <p class="store__price">USD ${obj.precio}</p>
-                    <input class="store__btn add-cart cart1" type="button" name="addCart" id="${obj.id}"
-                    value="Agregar al carrito"></input>`;
+// Renderizado de productos y carrito
+function render() {
+  products.forEach( obj => {
+    const item = document.createElement('div');
+    item.className = 'store__item-container';
+    item.innerHTML = `<h3 class="store__name">${obj.nombre}</h3>
+                      <img src=${obj.img}>
+                      <p class="store__price">USD ${obj.precio}</p>
+                      <input class="store__btn add-cart cart1" type="button" name="addCart" id="${obj.id}"
+                      value="Agregar al carrito"></input>`;
+  
+    // Selección de sección de renderizado 
+    obj.id < 9 ? masksContainer.appendChild(item)
+    : obj.id < 15 ?  clothesContainer.appendChild(item)
+    : obj.id < 24 ? necksContainer.appendChild(item)
+    : miscContainer.appendChild(item)
+  
+    // Agregado de evento a los botones
+    document.getElementById(obj.id).addEventListener('click', addCart);
+  }); 
 
-  // Selección de sección de renderizado
-  if (obj.id < 9) {
-    masksContainer.appendChild(item);
-  } else if (obj.id < 16) {
-    clothesContainer.appendChild(item);
-  } else if (obj.id < 25) {
-    necksContainer.appendChild(item);
-  } else {
-    miscContainer.appendChild(item);
-  }
-
-  // Agregado de evento a los botones
-  document.getElementById(obj.id).addEventListener('click', addCart);
-}); 
+  // Importado del carrito de compras del localStorage
+  localStorage.length ===0 ? cart = JSON.parse(localStorage.getItem('carrito')) : cart =[]
+}
 
 
-
+// Inicio de programa
+render()
 
