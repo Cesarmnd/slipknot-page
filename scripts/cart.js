@@ -1,4 +1,4 @@
-const itemsContainer = document.querySelector('.carts');
+const itemsContainer = document.querySelector('.carts__list');
 const section = document.createElement('section');
 section.classList.add( 'carts__products-container', 'products-container');
 
@@ -40,6 +40,46 @@ function placeItem () {
     cartProducts.appendChild(productContainer)
   });
 }
+
+
+
+const payBtn = document.getElementById('pay')
+payBtn.addEventListener('click', () => {
+  window.location.href = "./pago.html"
+})
+
+
+
+const emptyBtn = document.getElementById('emptyCart');
+emptyBtn.addEventListener('click', emptyCart)
+
+function emptyCart () {
+  Swal.fire({
+    title: '¿Eliminar todos los elementos del carrito?',
+    icon: 'warning',
+    color: '#fff',
+    background: '#202020',
+    showCancelButton: true,
+    confirmButtonColor: '#FF0001',
+    cancelButtonColor: '#500',
+    confirmButtonText: 'Eliminar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem('carrito');
+      items = localStorage.length != 0 ? itemCartContainer() : emptyWarning();
+      Swal.fire({
+        title: 'Eliminado',
+        text: 'Los elementos de tu carrito fueron eliminados',
+        icon: 'success',
+        color: '#fff',
+        background: '#202020',
+        confirmButtonColor: '#FF0001',
+      }
+      )
+    }
+  })
+}
+
 
 const cartList = localStorage.length != 0 ? JSON.parse(localStorage.getItem('carrito')) : [];
 

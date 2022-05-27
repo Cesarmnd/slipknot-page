@@ -53,7 +53,7 @@ console.log(products);
 
 // Creación de arrays
 let lista = [];
-let cart =[];
+let cart = localStorage.length != 0 ? JSON.parse(localStorage.getItem('carrito')) : [];
 
 // Función para añadir al carrito
 function addCart(e) {

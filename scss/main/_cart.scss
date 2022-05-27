@@ -1,6 +1,6 @@
 .carts {
     display: grid;
-    grid-template-rows: 72px min-content 1fr;
+    grid-template-rows: 72px min-content 1fr min-content;
 
     &__banner {
         grid-row: 2/3;
@@ -39,7 +39,6 @@
     }
 
     &__products-container {
-        grid-row: 3/4;
         position: relative;
         color: $white;
         display: flex;
@@ -85,7 +84,9 @@
         }
     }
 
-
+    &__list {
+      grid-row: 3/4;
+    }
 
     &__price {
         width: 100%;
@@ -160,10 +161,7 @@
     }
 
     &__button {
-        position: absolute;
         text-decoration: none;
-        bottom: 0;
-        right: 0;
         @include btn();
     }
 
@@ -171,4 +169,15 @@
       display: flex;
       align-items: center;
     }
+
+    &__btns {
+      grid-row: 4/5;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    
 }
