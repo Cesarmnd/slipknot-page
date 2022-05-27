@@ -678,6 +678,7 @@ body {
     margin-top: 50px; }
     @media screen and (min-width: 992px) {
       .carts__products-container {
+        width: 1080px;
         margin: 0 auto; } }
   .carts__product-header {
     display: none; }
@@ -697,7 +698,10 @@ body {
     width: 100%; }
     @media screen and (min-width: 768px) {
       .carts__product-title {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         width: 45%; } }
   .carts__price {
     width: 100%;
@@ -775,6 +779,9 @@ body {
       background-color: #202020;
       outline: none;
       border: none; }
+  .carts__product-container {
+    display: flex;
+    align-items: center; }
 
 .button-top {
   display: none; }
