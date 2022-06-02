@@ -1,7 +1,7 @@
  [
   { "id": 0, "stock":10, "nombre": "Shawn Crahan", "precio": 25, "img": "../images/masks/clownmask.png" },
-  { "id": 1, "stock":10, "nombre": "Craig Jones", "precio": 25, "img": "../images/masks/craigmask.png" },
-  { "id": 2, "stock":10, "nombre": "Mick Thomson", "precio": 25, "img": "../images/masks/mickmask.png" },
+  { "id": 1, "stock":1, "nombre": "Craig Jones", "precio": 25, "img": "../images/masks/craigmask.png" },
+  { "id": 2, "stock":1, "nombre": "Mick Thomson", "precio": 25, "img": "../images/masks/mickmask.png" },
   { "id": 3, "stock":10, "nombre": "Corey Taylor", "precio": 25, "img": "../images/masks/coreymask.png" },
   { "id": 4, "stock":10, "nombre": "Sid Wilson", "precio": 25, "img": "../images/masks/sidmask.png" },
   { "id": 5, "stock":10, "nombre": "Jim Root", "precio": 25, "img": "../images/masks/jimmask.png" },

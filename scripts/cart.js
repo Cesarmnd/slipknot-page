@@ -1,11 +1,18 @@
+// Selección de contenedores
 const itemsContainer = document.querySelector('.carts__list');
-const section = document.createElement('section');
-section.classList.add( 'carts__products-container', 'products-container');
+const sectionItems = document.createElement('section');
+sectionItems.classList.add( 'carts__products-container', 'products-container');
 
+//  Elección entre mensaje de carrito vacio o del contenido del carrito
 let items = localStorage.length != 0 ? itemCartContainer() : emptyWarning();
 
+// Actualizar elementos del carrito
+const cartList = localStorage.length != 0 ? JSON.parse(localStorage.getItem('carrito')) : [];
+cartList != [] && placeItem();
+
+// Render del contenedor de items
 function itemCartContainer () {
-  section.innerHTML = `<div class="carts__product-header product-header">
+  sectionItems.innerHTML = `<div class="carts__product-header product-header">
                         <h2 class="carts__product-title product-title">Product</h2>
                         <h3 class="carts__price price" >Price</h3>
                         <h3 class="carts__quantity quantity">Quantity</h3>
@@ -13,15 +20,22 @@ function itemCartContainer () {
                       </div>
                       <div class="carts__products products">
 
-                      </div> `;
-  itemsContainer.appendChild(section);  
+                      </div> 
+                      <section class="carts__btns">
+                        <button class="carts__button" id="back">Atras</button>
+                        <button class="carts__button" id="emptyCart">Vaciar carrito</button>
+                        <button class="carts__button" id="pay">Pagar</button> 
+                      </section>`;
+  itemsContainer.appendChild(sectionItems);  
 };
 
+// Render del mensaje de carrito vacio
 function emptyWarning () {
-  section.innerHTML = `<h2> Ud. aún no tiene productos en su carrito. </h2>`;
-  itemsContainer.appendChild(section);  
+  sectionItems.innerHTML = `<h2> Ud. aún no tiene productos en su carrito. </h2>`;
+  itemsContainer.appendChild(sectionItems);  
 };
 
+// Render de elementos del carrito
 function placeItem () {
   const cartProducts = document.querySelector('.carts__products');
 
@@ -39,20 +53,20 @@ function placeItem () {
     `
     cartProducts.appendChild(productContainer)
   });
+  localStorage.length === 0 && document.getElementById('emptyCart').setAttribute("disabled", '');
 }
 
-
-
+// Botón de pago
 const payBtn = document.getElementById('pay')
 payBtn.addEventListener('click', () => {
   window.location.href = "./pago.html"
 })
 
-
-
+// Botón de vaciado de carrito
 const emptyBtn = document.getElementById('emptyCart');
-emptyBtn.addEventListener('click', emptyCart)
+emptyBtn.addEventListener('click', emptyCart);
 
+// Vaciado de carrito
 function emptyCart () {
   Swal.fire({
     title: '¿Eliminar todos los elementos del carrito?',
@@ -63,7 +77,8 @@ function emptyCart () {
     confirmButtonColor: '#FF0001',
     cancelButtonColor: '#500',
     confirmButtonText: 'Eliminar'
-  }).then((result) => {
+  })
+  .then((result) => {
     if (result.isConfirmed) {
       localStorage.removeItem('carrito');
       items = localStorage.length != 0 ? itemCartContainer() : emptyWarning();
@@ -73,14 +88,12 @@ function emptyCart () {
         icon: 'success',
         color: '#fff',
         background: '#202020',
-        confirmButtonColor: '#FF0001',
-      }
-      )
+        confirmButtonColor: '#FF0001',})
     }
   })
 }
 
 
-const cartList = localStorage.length != 0 ? JSON.parse(localStorage.getItem('carrito')) : [];
 
-cartList != [] && placeItem() 
+
+
