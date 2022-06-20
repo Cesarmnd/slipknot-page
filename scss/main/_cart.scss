@@ -1,6 +1,6 @@
 .carts {
     display: grid;
-    grid-template-rows: 72px min-content 1fr min-content;
+    grid-template-rows: 72px min-content 1fr;
 
     &__banner {
         grid-row: 2/3;
@@ -43,7 +43,7 @@
         color: $white;
         display: flex;
         flex-wrap: wrap;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         max-width: 950px;
         justify-content: space-around;
         margin: 0 16px;
@@ -51,7 +51,7 @@
 
         @media screen and (min-width: 992px) {
           width: 1080px;
-          margin: 0 auto;
+          margin: 10px auto;
         }
     }
 
@@ -78,7 +78,7 @@
         @media screen and (min-width: 768px) {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
             width: 45%;
         }
@@ -111,7 +111,7 @@
 
         &--valor {
             justify-content: center;
-        }
+        }  
     }
 
     &__total {
@@ -146,7 +146,7 @@
     }
 
     &__img {
-        width: 150px;
+        width: 100px;
     }
 
     &__total-container {
@@ -160,6 +160,11 @@
         padding-right: 10px;
     }
 
+    &__total-item {
+      width: 10%;
+      text-align: center;
+    }
+
     &__button {
         text-decoration: none;
         @include btn();
@@ -168,14 +173,47 @@
     &__product-container {
       display: flex;
       align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #fff;
     }
 
     &__btns {
       grid-row: 4/5;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       position: relative;
       width: 50%;
       margin: 0 auto;
     }
+
+    &__btn {
+      background-color: transparent;
+      font-size: 25px;
+      border: none;
+      color: #fff;
+      font-weight: bolder;
+      margin: 0px 25px 16px 25px;
+    }
+
+    &__warning {
+      text-align: center;
+
+      &-text {
+        margin: 50px 0;
+      }
+    }
+
+    &__totalAllItems {
+      font-size: 25px;
+      text-align: center;
+      margin: 10px 0;
+    }
+}
+
+.hidden {
+  display: none;
+}
+
+.product-title {
+  justify-content: center;
 }
