@@ -193,6 +193,16 @@
       color: #fff;
       font-weight: bolder;
       margin: 0px 25px 16px 25px;
+         
+      &:hover {
+        color: $red-logo;
+      }
+
+      &:focus {
+        color: $red-logo;
+        border: none;
+        outline: none;
+      }
     }
 
     &__warning {
@@ -216,4 +226,8 @@
 
 .product-title {
   justify-content: center;
+}
+
+.remove {
+  font-size: 20px;
 }

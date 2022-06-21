@@ -5,7 +5,8 @@
 /* Cambios generales */
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  user-select: none; }
 
 body {
   background-color: #202020;
@@ -799,6 +800,12 @@ body {
     color: #fff;
     font-weight: bolder;
     margin: 0px 25px 16px 25px; }
+    .carts__btn:hover {
+      color: #FF0001; }
+    .carts__btn:focus {
+      color: #FF0001;
+      border: none;
+      outline: none; }
   .carts__warning {
     text-align: center; }
     .carts__warning-text {
@@ -813,6 +820,9 @@ body {
 
 .product-title {
   justify-content: center; }
+
+.remove {
+  font-size: 20px; }
 
 .button-top {
   display: none; }

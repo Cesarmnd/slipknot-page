@@ -2,465 +2,389 @@
 <html lang="es">
 
 <head>
-    <title>Slipknot | Pago</title>
-    <link rel="icon" href="../images/star.png">
-    <meta charset="utf-8">
-    <!-- Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Etiquetas de SEO -->
-    <meta name="keywords"
-        content="slipknot, banda, eventos, miembros, corey, clown, jay, jim, sid, tortilla, vman, craig, mick, logo">
-    <meta name="description"
-        content="Slipknot es una banda estadounidense de heavy metal que realiza giras a través del mundo. Las canciones de Slipknot estan en su mayoría inspiradas en sucesos acontecidos en la vida de sus miembros.">
-    <!-- Estilos de BS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- Mis Estilos -->
-    <link rel="stylesheet" href="../css/style.css">
+  <title>Slipknot | Pago</title>
+  <link rel="icon" href="../images/star.png">
+  <meta charset="utf-8">
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Etiquetas de SEO -->
+  <meta name="keywords"
+    content="slipknot, banda, eventos, miembros, corey, clown, jay, jim, sid, tortilla, vman, craig, mick, logo">
+  <meta name="description"
+    content="Slipknot es una banda estadounidense de heavy metal que realiza giras a través del mundo. Las canciones de Slipknot estan en su mayoría inspiradas en sucesos acontecidos en la vida de sus miembros.">
+  <!-- Estilos de BS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Mis Estilos -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <!-- Menú de navegación -->
-        <nav class="header__nav navbar navbar-expand-lg" id="navBar">
-            <!-- Logo para Mobile -->
-            <a class="header__logo header__logo--pages" href="../index.html" id="logo">
-                <img src="../images/logo.png" alt="logo" title="Página de inicio de Slipknot">
-            </a>
-            <!-- Botón de apertura -->
-            <button class="header__button-nav" type="button" id="OpenMenu">
-                <span>
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
-                        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512">
-                        <path fill="#FF0001"
-                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
-                        </path>
-                    </svg>
-                </span>
-            </button>
-            <!-- Offcanvas -->
-            <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
-                tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <!-- Encabezado -->
-                <div class="offcanvas-header">
-                    <!-- Logo -->
-                    <a class="header__logo" href="../index.html" id="logo">
-                        <img src="../images/logo.png" alt="logo" title="Slipknot">
-                    </a>
-                    <!-- Botón de cierre -->
-                    <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
-                            <path fill-rule="evenodd"
-                                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Contenido -->
-                <div class="header__offcanvas-elements offcanvas-body">
-                    <!-- Menú -->
-                    <ul class="header__menu navbar-nav">
-                        <!-- Elementos del menú -->
-                        <li class="header__element nav-item">
-                            <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                            <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
-                        </li>
-                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                            <a class="header__link" href="../index.html#albums">Discografía</a>
-                        </li>
-                        <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                            <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
-                        </li>
-                        <!-- Submenú -->
-                        <li class="header__element nav-item dropdown">
-                            <!-- Flecha de despliegue -->
-                            <a class="header__link navLink dropdown-toggle" href="tienda.html"
-                                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Tienda
-                            </a>
-                            <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <!-- Elementos del submenú -->
-                                <li>
-                                    <a class="header__sublink dropdown-item" href="tienda.html#mascaras">Máscaras</a>
-                                </li>
-                                <li>
-                                    <a class="header__sublink dropdown-item" href="tienda.html#prendas">Prendas de
-                                        vestir</a>
-                                </li>
-                                <li>
-                                    <a class="header__sublink dropdown-item" href="tienda.html#accesorios">Polainas de
-                                        cuello</a>
-                                </li>
-                                <li>
-                                    <a class="header__sublink dropdown-item"
-                                        href="tienda.html#miscelanea">Miscelánea</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="header__element nav-item">
-                            <a class="header__link" href="contactos.html">Contactos</a>
-                        </li>
-                    </ul>
-                    <!-- Logo Secundario -->
-                    <img class="header__star header__star--mobile" src="../images/star_2.png" alt="star"
-                        title="Slipknot star">
-                </div>
-            </div>
-            <!-- Navbar -->
-            <div class="header__desktop">
-                <!-- Menú -->
-                <!-- Logo -->
-                <a class="header__logo" href="../index.html" id="logo">
-                    <img src="../images/logo.png" alt="logo" title="Slipknot">
-                </a>
-                <ul class="header__menu navbar-nav">
-                    <!-- Elementos del menú -->
-                    <li class="header__element nav-item">
-                        <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                        <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
-                    </li>
-                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                        <a class="header__link" href="../index.html#albums">Discografía</a>
-                    </li>
-                    <li class="header__element nav-item" data-bs-dismiss="offcanvas">
-                        <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
-                    </li>
-                    <!-- Submenú -->
-                    <li class="header__element nav-item dropdown">
-                        <!-- Flecha de despliegue -->
-                        <a class="header__link navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tienda
-                        </a>
-                        <ul class="header__submenu header__submenu--solid dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <!-- Elementos del submenú -->
-                            <li>
-                                <a class="header__sublink dropdown-item" href="tienda.html#mascaras">Máscaras</a>
-                            </li>
-                            <li>
-                                <a class="header__sublink dropdown-item" href="tienda.html#prendas">Prendas de
-                                    vestir</a>
-                            </li>
-                            <li>
-                                <a class="header__sublink dropdown-item" href="tienda.html#accesorios">Polainas de
-                                    cuello</a>
-                            </li>
-                            <li>
-                                <a class="header__sublink dropdown-item" href="tienda.html#miscelanea">Miscelánea</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header__element nav-item">
-                        <a class="header__link" href="contactos.html">Contactos</a>
-                    </li>
-                </ul>
-                <!-- Logo Secundario -->
-                <img class="header__star" src="../images/star_2.png" alt="star" title="Slipknot star">
-            </div>
-        </nav>
-    </header>
-    <!-- Main -->
-    <main class="payment">
-        <section class="payment__banner">
-            <h1 class="payment__title">Proceso de pago</h1>
-            <!-- Link para ir al carrito de compras -->
-            <div class="payment__cart cart">
-                <a class="payment__cart-link" href="cart.html"></a>
-            </div>
-        </section>
-        <!-- Formulario de compra -->
-        <form class="payment__form" action="" method="">
-            <!-- Dirección de facturación -->
-            <fieldset class="payment__fieldset">
-                <legend class="payment__legend h5">1. Dirección de facturación</legend>
-                <!-- Información -->
-                <div>
-                    <label class="payment__label" for="name">Nombres<span> *</span></label>
-                    <input class="payment__input" type="text" name="name" id="name"
-                        placeholder="Escribe tu nombre aquí...">
-                </div>
-                <div>
-                    <label class="payment__label" for="lastName">Apellidos<span> *</span></label>
-                    <input class="payment__input" type="text" name="lastName" id="lastName"
-                        placeholder="Escribe tu apellido aquí...">
-                </div>
-                <div>
-                    <label class="payment__label" for="email">Email<span> *</span></label>
-                    <input class="payment__input" type="email" name="email" id="email"
-                        placeholder="Escribe tu email aquí...">
-                </div>
-                <div>
-                    <label class="payment__label" for="telf">Teléfono<span> *</span></label>
-                    <input class="payment__input" type="tel" name="tel" id="tel"
-                        placeholder="Escribe tu número aquí...">
-                </div>
-                <div class="payment__direction">
-                    <label class="payment__label" for="address">Dirección<span> *</span></label>
-                    <input class="payment__input" type="text" name="address" id="address"
-                        placeholder="Escribe tu dirección aquí...">
-                    <input class="payment__input" type="text" name="addressTwo" id="addressTwo">
-                </div>
-                <div class="payment__country">
-                    <!-- Selección de país -->
-                    <label class="payment__label" for="country">País<span> *</span></label>
-                    <select class="payment__select" name="country" id="country">
-                        <option value="default">------</option>
-                        <option value="peru">Perú</option>
-                        <option value="chile">Chile</option>
-                        <option value="argentina">Argentina</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="ecuador">Ecuador</option>
-                        <option value="uruguay">Uruguay</option>
-                        <option value="paraguay">Paraguay</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="mexico">Mexico</option>
-                        <option value="venezuela">Venezuela</option>
-                    </select>
-                </div>
-                <div>
-                    <!-- Selección de ciudad -->
-                    <label class="payment__label" for="city">Ciudad<span> *</span></label>
-                    <select class="payment__select" name="city" id="city">
-                        <option value="default">------</option>
-                        <option value="cityOne">Ciudad 1</option>
-                        <option value="cityTwo">Ciudad 2</option>
-                        <option value="cityThree">Ciudad 3</option>
-                        <option value="cityFour">Ciudad 4</option>
-                        <option value="cityFive">Ciudad 5</option>
-                    </select>
-                </div>
-                <div>
-                    <!-- Información -->
-                    <label class="payment__label" for="postalCode">Código postal<span>*</span></label>
-                    <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode"
-                        placeholder="Código Postal">
-                </div>
-                <div class="payment__check">
-                    <!-- Confirmación de envío -->
-                    <input type="checkbox" name="shipInfo" id="shipInfo">
-                    <label for="shipInfo" id="shipCom">Hacer el envío a esta dirección.</label>
-                </div>
-            </fieldset>
-            <!-- Método de pago -->
-            <fieldset class="payment__fieldset">
-                <legend class="payment__legend h5">2. Método de pago</legend>
-                <!-- Información de la tarjeta de crédito -->
-                <div class="payment__card">
-                    <input type="radio" name="paymentMethod" id="debitCard">
-                    <label class="payment__card-label" for="debitCard">Tarjeta de débito</label>
-                    <div class="payment__icons" id="debitIcons">
-                        <img src="../images/icons/visa-32.png" alt="visaTwo">
-                        <img src="../images/icons/mastercard-32.png" alt="masterCardTwo">
-                        <img src="../images/icons/amex-32.png" alt="americanExpressTwo">
-                    </div>
-                </div>
-                <!-- Datos comerciales de la tarjeta de crédito -->
-                <div class="payment__owner-name">
-                    <label class="payment__label" for="ownerName">Nombre del propietario<span> *</span></label>
-                    <input class="payment__input" type="text" name="ownerName" id="ownerName"
-                        placeholder="Escribe su nombre aquí...">
-                </div>
-                <div class="payment__card-number">
-                    <label class="payment__label" for="creditNumber">Número de tarjeta<span> *</span></label>
-                    <input class="payment__input" type="text" name="creditNumber" id="creditNumber"
-                        placeholder="Escribe el número de tarjeta aquí...">
-                </div>
-                <div>
-                    <label class="payment__label" for="expDate">Fecha de expiración<span> *</span></label>
-                    <input type="date" name="expDate" id="expDate">
-                </div>
-                <div>
-                    <label class="payment__label" for="cvv">CVV/CVC<span> *</span></label>
-                    <input class="payment__input payment__input--code" type="number" name="cvv" id="cvv"
-                        placeholder="CVV/CVC">
-                </div>
-                <!-- Información de la tarjeta de débito -->
-                <div class="payment__card">
-                    <input type="radio" name="paymentMethod" id="debitCard">
-                    <label class="payment__card-label" for="debitCard">Tarjeta de débito</label>
-                    <div class="payment__icons" id="debitIcons">
-                        <img src="../images/icons/visa-32.png" alt="visaTwo">
-                        <img src="../images/icons/mastercard-32.png" alt="masterCardTwo">
-                        <img src="../images/icons/amex-32.png" alt="americanExpressTwo">
-                    </div>
-                </div>
-                <!-- Datos comerciales de la tarjeta de débito -->
-                <div class="payment__owner-name">
-                    <label class="payment__label" for="ownerName">Nombre del propietario<span> *</span></label>
-                    <input class="payment__input" type="text" name="ownerName" id="ownerName"
-                        placeholder="Escriba su nombre aquí...">
-                </div>
-                <div class="payment__card-number">
-                    <label class="payment__label" for="creditNumber">Número de tarjeta<span> *</span></label>
-                    <input class="payment__input" type="text" name="creditNumber" id="creditNumber"
-                        placeholder="Escribe el número de tarjeta aquí...">
-                </div>
-                <div>
-                    <label class="payment__label" for="expDate">Fecha de expiración<span> *</span></label>
-                    <input type="date" name="expDate" id="expDate">
-                </div>
-                <div>
-                    <label class="payment__label" for="cvv">CVV/CVC<span> *</span></label>
-                    <input class="payment__input payment__input--code" type="number" name="cvv" id="cvv"
-                        placeholder="CVV/CVC">
-                </div>
-            </fieldset>
-            <!-- Envío -->
-            <fieldset class="payment__fieldset">
-                <legend class="payment__legend h5">3. Envío</legend>
-                <!-- Información de envío -->
-                <div class="payment__direction">
-                    <label class="payment__label" for="addressShip">Dirección de envío<span>*</span></label>
-                    <input class="payment__input" type="text" name="addressShip" id="addressShip"
-                        placeholder="Escribe su dirección aquí...">
-                    <input class="payment__input" type="text" name="addressShipTwo" id="addressShipTwo">
-                </div>
-                <div class="payment__reference">
-                    <label class="payment__label" for="reference">Referencia (Opcional)</label>
-                    <input class="payment__input" type="text" name="reference" id="reference"
-                        placeholder="Escribe una referencia aquí...">
-                </div>
-                <div class="payment__country">
-                    <!-- Selección de país -->
-                    <label class="payment__label" for="countryShip">País<span>*</span></label>
-                    <select class="payment__select" name="countryShip" id="countryShip">
-                        <option value="default">------</option>
-                        <option value="peru">Perú</option>
-                        <option value="chile">Chile</option>
-                        <option value="argentina">Argentina</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="ecuador">Ecuador</option>
-                        <option value="uruguay">Uruguay</option>
-                        <option value="paraguay">Paraguay</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="mexico">Mexico</option>
-                        <option value="venezuela">Venezuela</option>
-                    </select>
-                </div>
-                <div>
-                    <!-- Selección de ciudad -->
-                    <label class="payment__label" for="cityShip">Ciudad<span>*</span></label>
-                    <select class="payment__select" name="cityShip" id="cityShip">
-                        <option value="default">------</option>
-                        <option value="cityOne">Ciudad 1</option>
-                        <option value="cityTwo">Ciudad 2</option>
-                        <option value="cityThree">Ciudad 3</option>
-                        <option value="cityFour">Ciudad 4</option>
-                        <option value="cityFive">Ciudad 5</option>
-                    </select>
-                </div>
-                <div>
-                    <!-- Información de envío -->
-                    <label class="payment__label" for="postalCode">Código postal<span>*</span></label>
-                    <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode"
-                        placeholder="Código Postal">
-                </div>
-                <div>
-                    <label class="payment__label" for="shipDate">Fecha de envío<span>*</span></label>
-                    <input type="date" name="shipDate" id="shipDate">
-                </div>
-                <div>
-                    <!-- Selección de horario -->
-                    <label class="payment__label" for="shipSched">Horario de envío<span>*</span></label>
-                    <select class="payment__select" name="shipSched" id="shipSched">
-                        <option value="default">------</option>
-                        <option value="rangeOne">Rango 1</option>
-                        <option value="rangeTwo">Rango 2</option>
-                        <option value="rangeThree">Rango 3</option>
-                        <option value="rangeFour">Rango 4</option>
-                        <option value="rangeFive">Rango 5</option>
-                    </select>
-                </div>
-            </fieldset>
-            <!-- Botón de pago -->
-            <div class="payment__button">
-                <button class="payment__button-element" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Pagar
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class=" payment__modal modal-content">
-                            <div class=" payment__modal-header modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Compra realizada</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class=" payment__modal-body modal-body">
-                                ¡Gracias por confiar en nosotros! Le estaremos informando a través del correo
-                                electrónico cuando su pedido se encuentre en camino.
-                            </div>
-                            <div class=" payment__modal-footer modal-footer">
-                                <button type="button" class="payment__button-element btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </main>
-    <!-- Footer -->
-    <footer class="footer container-fluid py-3">
+  <!-- Header -->
+  <header class="header" id="header">
+    <!-- Menú de navegación -->
+    <nav class="header__nav navbar navbar-expand-lg" id="navBar">
+      <!-- Logo para Mobile -->
+      <a class="header__logo header__logo--pages" href="../index.html" id="logo">
+        <img src="../images/logo.png" alt="logo" title="Página de inicio de Slipknot">
+      </a>
+      <!-- Botón de apertura -->
+      <button class="header__button-nav" type="button" id="OpenMenu">
+        <span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+            class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="#FF0001"
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+            </path>
+          </svg>
+        </span>
+      </button>
+      <!-- Offcanvas -->
+      <div class="header__offcanvas offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <!-- Encabezado -->
+        <div class="offcanvas-header">
+          <!-- Logo -->
+          <a class="header__logo" href="../index.html" id="logo">
+            <img src="../images/logo.png" alt="logo" title="Slipknot">
+          </a>
+          <!-- Botón de cierre -->
+          <button type="button" class="header__button-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fafafa" class="bi bi-x-lg"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+              <path fill-rule="evenodd"
+                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+            </svg>
+          </button>
+        </div>
+        <!-- Contenido -->
+        <div class="header__offcanvas-elements offcanvas-body">
+          <!-- Menú -->
+          <ul class="header__menu navbar-nav">
+            <!-- Elementos del menú -->
+            <li class="header__element nav-item">
+              <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+              <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
+            </li>
+            <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+              <a class="header__link" href="../index.html#albums">Discografía</a>
+            </li>
+            <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+              <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
+            </li>
+            <!-- Submenú -->
+            <li class="header__element nav-item dropdown">
+              <!-- Flecha de despliegue -->
+              <a class="header__link navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tienda
+              </a>
+              <ul class="header__submenu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <!-- Elementos del submenú -->
+                <li>
+                  <a class="header__sublink dropdown-item" href="tienda.html#mascaras">Máscaras</a>
+                </li>
+                <li>
+                  <a class="header__sublink dropdown-item" href="tienda.html#prendas">Prendas de
+                    vestir</a>
+                </li>
+                <li>
+                  <a class="header__sublink dropdown-item" href="tienda.html#accesorios">Polainas de
+                    cuello</a>
+                </li>
+                <li>
+                  <a class="header__sublink dropdown-item" href="tienda.html#miscelanea">Miscelánea</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__element nav-item">
+              <a class="header__link" href="contactos.html">Contactos</a>
+            </li>
+          </ul>
+          <!-- Logo Secundario -->
+          <img class="header__star header__star--mobile" src="../images/star_2.png" alt="star" title="Slipknot star">
+        </div>
+      </div>
+      <!-- Navbar -->
+      <div class="header__desktop">
+        <!-- Menú -->
         <!-- Logo -->
-        <a href="index.html" id="logoFooter">
-            <img class="footer__logo" src="../images/logo.png" alt="logoFooter">
+        <a class="header__logo" href="../index.html" id="logo">
+          <img src="../images/logo.png" alt="logo" title="Slipknot">
         </a>
-        <!-- Redes Sociales -->
-        <!-- Textos -->
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.facebook.com/slipknot"
-                    target="_blank">Facebook</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.instagram.com/slipknot/"
-                    target="_blank">Instagram</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-2 text-muted"
-                    href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                    target="_blank">Twitter</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ"
-                    target="_blank">Youtube</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-2 text-muted" href="https://www.reddit.com/r/Slipknot/"
-                    target="_blank">Reddit</a>
-            </li>
+        <ul class="header__menu navbar-nav">
+          <!-- Elementos del menú -->
+          <li class="header__element nav-item">
+            <a class="header__link" aria-current="page" href="../index.html">Inicio</a>
+          </li>
+          <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+            <a class="header__link" href="../index.html#aboutUs">Nosotros</a>
+          </li>
+          <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+            <a class="header__link" href="../index.html#albums">Discografía</a>
+          </li>
+          <li class="header__element nav-item" data-bs-dismiss="offcanvas">
+            <a class="header__link" href="../index.html#proxEvents">Presentaciones</a>
+          </li>
+          <!-- Submenú -->
+          <li class="header__element nav-item dropdown">
+            <!-- Flecha de despliegue -->
+            <a class="header__link navLink dropdown-toggle" href="tienda.html" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Tienda
+            </a>
+            <ul class="header__submenu header__submenu--solid dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <!-- Elementos del submenú -->
+              <li>
+                <a class="header__sublink dropdown-item" href="tienda.html#mascaras">Máscaras</a>
+              </li>
+              <li>
+                <a class="header__sublink dropdown-item" href="tienda.html#prendas">Prendas de
+                  vestir</a>
+              </li>
+              <li>
+                <a class="header__sublink dropdown-item" href="tienda.html#accesorios">Polainas de
+                  cuello</a>
+              </li>
+              <li>
+                <a class="header__sublink dropdown-item" href="tienda.html#miscelanea">Miscelánea</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__element nav-item">
+            <a class="header__link" href="contactos.html">Contactos</a>
+          </li>
         </ul>
-       
-        <!-- Copyright -->
-        <p class="footer__copyright text-center text-muted">© 2021 Slipknot, Inc</p>
-    </footer>
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
+        <!-- Logo Secundario -->
+        <img class="header__star" src="../images/star_2.png" alt="star" title="Slipknot star">
+      </div>
+    </nav>
+  </header>
+  <!-- Main -->
+  <main class="payment">
+    <section class="payment__banner">
+      <h1 class="payment__title">Proceso de pago</h1>
+      <!-- Link para ir al carrito de compras -->
+      <div class="payment__cart cart">
+        <a class="payment__cart-link" href="cart.html"></a>
+      </div>
+    </section>
 
-    <!-- Scripts de íconos -->
+    <!-- Formulario de compra -->
+    <form class="payment__form" action="" method="">
+      <!-- Dirección de facturación -->
+      <fieldset class="payment__fieldset">
+        <legend class="payment__legend h5">1. Dirección de facturación</legend>
+        <!-- Información -->
+        <div>
+          <label class="payment__label" for="name">Nombres<span> *</span></label>
+          <input class="payment__input" type="text" name="name" id="name" placeholder="Escribe tu nombre aquí...">
+        </div>
+        <div>
+          <label class="payment__label" for="lastName">Apellidos<span> *</span></label>
+          <input class="payment__input" type="text" name="lastName" id="lastName"
+            placeholder="Escribe tu apellido aquí...">
+        </div>
+        <div>
+          <label class="payment__label" for="email">Email<span> *</span></label>
+          <input class="payment__input" type="email" name="email" id="email" placeholder="Escribe tu email aquí...">
+        </div>
+        <div>
+          <label class="payment__label" for="telf">Teléfono<span> *</span></label>
+          <input class="payment__input" type="tel" name="tel" id="tel" placeholder="Escribe tu número aquí...">
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <input class="input-phone" type="text" />
+        </div>
+        <div class="payment__direction">
+          <label class="payment__label" for="address">Dirección<span> *</span></label>
+          <input class="payment__input" type="text" name="address" id="address"
+            placeholder="Escribe tu dirección aquí...">
+          <input class="payment__input" type="text" name="addressTwo" id="addressTwo">
+        </div>
 
-    <!-- Mis scripts -->
-    <script src="../scripts/payment.js">
-</script>
+      </fieldset>
+      <!-- Método de pago -->
+      <fieldset class="payment__fieldset">
+        <legend class="payment__legend h5">2. Método de pago</legend>
+        <!-- Información de la tarjeta de crédito -->
+        <div class="payment__card">
+          <input type="radio" name="paymentMethod" id="debitCard">
+          <label class="payment__card-label" for="debitCard">Tarjeta de débito</label>
+          <div class="payment__icons" id="debitIcons">
+            <img src="../images/icons/visa-32.png" alt="visaTwo">
+            <img src="../images/icons/mastercard-32.png" alt="masterCardTwo">
+            <img src="../images/icons/amex-32.png" alt="americanExpressTwo">
+          </div>
+        </div>
+        <!-- Datos comerciales de la tarjeta de crédito -->
+        <div class="payment__owner-name">
+          <label class="payment__label" for="ownerName">Nombre del propietario<span> *</span></label>
+          <input class="payment__input" type="text" name="ownerName" id="ownerName"
+            placeholder="Escribe su nombre aquí...">
+        </div>
+        <div class="payment__card-number">
+          <label class="payment__label" for="creditNumber">Número de tarjeta<span> *</span></label>
+          <input class="payment__input" type="text" name="creditNumber" id="creditNumber"
+            placeholder="Escribe el número de tarjeta aquí...">
+        </div>
+        <div>
+          <label class="payment__label" for="expDate">Fecha de expiración<span> *</span></label>
+          <input type="date" name="expDate" id="expDate">
+        </div>
+        <div>
+          <label class="payment__label" for="cvv">CVV/CVC<span> *</span></label>
+          <input class="payment__input payment__input--code" type="number" name="cvv" id="cvv" placeholder="CVV/CVC">
+        </div>
+        <!-- Información de la tarjeta de débito -->
+        <div class="payment__card">
+          <input type="radio" name="paymentMethod" id="debitCard">
+          <label class="payment__card-label" for="debitCard">Tarjeta de débito</label>
+          <div class="payment__icons" id="debitIcons">
+            <img src="../images/icons/visa-32.png" alt="visaTwo">
+            <img src="../images/icons/mastercard-32.png" alt="masterCardTwo">
+            <img src="../images/icons/amex-32.png" alt="americanExpressTwo">
+          </div>
+        </div>
+        <!-- Datos comerciales de la tarjeta de débito -->
+        <div class="payment__owner-name">
+          <label class="payment__label" for="ownerName">Nombre del propietario<span> *</span></label>
+          <input class="payment__input" type="text" name="ownerName" id="ownerName"
+            placeholder="Escriba su nombre aquí...">
+        </div>
+        <div class="payment__card-number">
+          <label class="payment__label" for="creditNumber">Número de tarjeta<span> *</span></label>
+          <input class="payment__input" type="text" name="creditNumber" id="creditNumber"
+            placeholder="Escribe el número de tarjeta aquí...">
+        </div>
+        <div>
+          <label class="payment__label" for="expDate">Fecha de expiración<span> *</span></label>
+          <input type="date" name="expDate" id="expDate">
+        </div>
+        <div>
+          <label class="payment__label" for="cvv">CVV/CVC<span> *</span></label>
+          <input class="payment__input payment__input--code" type="number" name="cvv" id="cvv" placeholder="CVV/CVC">
+        </div>
+      </fieldset>
+      <!-- Envío -->
+      <fieldset class="payment__fieldset">
+        <legend class="payment__legend h5">3. Envío</legend>
+        <!-- Información de envío -->
+        <div class="payment__direction">
+          <label class="payment__label" for="addressShip">Dirección de envío<span>*</span></label>
+          <input class="payment__input" type="text" name="addressShip" id="addressShip"
+            placeholder="Escribe su dirección aquí...">
+          <input class="payment__input" type="text" name="addressShipTwo" id="addressShipTwo">
+        </div>
+        <div class="payment__reference">
+          <label class="payment__label" for="reference">Referencia (Opcional)</label>
+          <input class="payment__input" type="text" name="reference" id="reference"
+            placeholder="Escribe una referencia aquí...">
+        </div>
+        <div class="payment__country">
+          <!-- Selección de país -->
+          <label class="payment__label" for="countryShip">País<span>*</span></label>
+          <select class="payment__select" name="countryShip" id="countryShip">
+            <option value="default">------</option>
+            <option value="peru">Perú</option>
+            <option value="chile">Chile</option>
+            <option value="argentina">Argentina</option>
+            <option value="colombia">Colombia</option>
+          </select>
+        </div>
+        <div>
+          <!-- Selección de ciudad -->
+          <label class="payment__label" for="cityShip">Ciudad<span>*</span></label>
+          <select class="payment__select" name="cityShip" id="cityShip">
+            <option value="default">------</option>
+          </select>
+        </div>
+        <div>
+          <!-- Información de envío -->
+          <label class="payment__label" for="postalCode">Código postal<span>*</span></label>
+          <input class="payment__input payment__input--code" type="text" name="postalCode" id="postalCode"
+            placeholder="Código Postal">
+        </div>
+        <div>
+          <label class="payment__label" for="shipDate">Fecha de envío<span>*</span></label>
+          <input type="date" name="shipDate" id="shipDate">
+        </div>
+        <div>
+          <!-- Selección de horario -->
+          <label class="payment__label" for="shipSched">Horario de envío<span>*</span></label>
+          <select class="payment__select" name="shipSched" id="shipSched">
+            <option value="default">------</option>
+            <option value="rangeOne">8:00 - 12:00</option>
+            <option value="rangeTwo">12:00 - 16:00</option>
+            <option value="rangeThree">16:00 - 20:00</option>
+            <option value="rangeFour">20:00 - 24:00</option>
+          </select>
+        </div>
+      </fieldset>
+      <!-- Botón de pago -->
+      <div class="payment__button">
+        <button class="payment__button-element" type="button" id="payBtn">
+          Pagar
+        </button>
+
+      </div>
+    </form>
+  </main>
+  <!-- Footer -->
+  <footer class="footer container-fluid py-3">
+    <!-- Logo -->
+    <a href="index.html" id="logoFooter">
+      <img class="footer__logo" src="../images/logo.png" alt="logoFooter">
+    </a>
+    <!-- Redes Sociales -->
+    <!-- Textos -->
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" href="https://www.facebook.com/slipknot" target="_blank">Facebook</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" href="https://www.instagram.com/slipknot/" target="_blank">Instagram</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted"
+          href="https://twitter.com/slipknot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          target="_blank">Twitter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" href="https://www.youtube.com/channel/UCOJZ1tna8yj8mAEITPkHNCQ"
+          target="_blank">Youtube</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" href="https://www.reddit.com/r/Slipknot/" target="_blank">Reddit</a>
+      </li>
+    </ul>
+
+    <!-- Copyright -->
+    <p class="footer__copyright text-center text-muted">© 2021 Slipknot, Inc</p>
+  </footer>
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+
+  <!-- Scripts de SweetAlert -->
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Scripts de íconos -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Mis scripts -->
+  <script src="../scripts/payment.js"></script>
+  </script>
 
 </body>
 

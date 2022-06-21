@@ -57,7 +57,7 @@ function itemsRender() {
     itemContainer.innerHTML = `<h3 class="store__name">${obj.name}</h3>
                               <img src=${obj.img}>
                               <p class="store__price">USD ${obj.price}</p>
-                              <input class="store__btn add-cart cart1" type="button" name="addCart" id="${obj.id}" value="Agregar al cartData"></input>`;
+                              <input class="store__btn add-cart cart1" type="button" name="addCart" id="${obj.id}" value="Agregar al carrito"></input>`;
   
     // Selección de contenedor de renderizado 
     obj.id < 9 ? masksContainer.appendChild(itemContainer)
